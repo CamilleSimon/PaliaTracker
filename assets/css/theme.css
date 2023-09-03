@@ -21,8 +21,7 @@ table thead tr th.sort-desc:after {
 }
 
 .fish-image {
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 #filters {
@@ -49,8 +48,4 @@ main {
   width: 44px;
   height: 44px;
   vertical-align: text-bottom;
-}
-
-td {
-  height: auto;
 }
