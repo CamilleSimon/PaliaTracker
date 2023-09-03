@@ -54,13 +54,10 @@
           <option value="glow-worm">Glow Worm</option>
         </select>
       </div>
-      <table
-        class="table table-striped table-dark align-middle"
-        id="fish-table"
-      >
+      <table class="table table-dark align-middle" id="fish-table">
         <thead>
           <tr>
-            <th></th>
+            <th class="no-sort"></th>
             <th scope="col">Name</th>
             <th scope="col">Location</th>
             <th scope="col">Bait</th>
@@ -303,6 +300,491 @@
           </tr>
           <tr>
             <td class="fish-image">
+              <img src="assets/img/Cutthroat_Trout.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Cutthroat Trout</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Dawnray.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Dawnray</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="none">None</td>
+            <td>Morning</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Duskray.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Dawnray</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="none">None</td>
+            <td>Evening</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Enchanted_Pupfish.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Enchanted Pupfish</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Energized_Piranha.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Energized Piranha</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Eyeless_Minnow.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Eyeless Minnow</td>
+            <td data-location="caves">Caves</td>
+            <td data-bait="none">None</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Fairy_Carp.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Fairy Carp</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="worm">Worm</td>
+            <td>Morning, Evening</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Fathead_Minnow.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Fathead Minnow</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Flametongue_Ray.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Flametongue Ray</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>Morning, Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Freshwater_Eel.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Freshwater Eel</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>Evening, Night</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Giant_Goldfish.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Giant Goldfish</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img
+                src="assets/img/Giant_Kilima_Stingray.webp"
+                class="fish-icon"
+              />
+            </td>
+            <td class="fish-name">Giant Kilima Stingray</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>Morning, Day, Evening</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Gillyfin.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Gillyfin</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="none">None</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Golden_Salmon.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Golden Salmon</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>Morning, Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Honey_Loach.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Honey Loach</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>Day, Night</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Hypnotic_Moray.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Hypnotic Moray</td>
+            <td data-location="caves">Caves</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Indigo Lamprey.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Indigo Lamprey</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>Evening, Night</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Kenli's_Carp.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Kenli's Carp</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Kilima_Catfish.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Kilima Catfish</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Kilima_Greyling.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Kilima Greyling</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Kilima_Redfin.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Kilima Redfin</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Largemouth_Bass.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Largemouth Bass</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img
+                src="assets/img/Long_Nosed_Unicorn_Fish.webp"
+                class="fish-icon"
+              />
+            </td>
+            <td class="fish-name">Long Nosed Unicorn Fish</td>
+            <td data-location="bahari-coast">Bahari Coast</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img
+                src="assets/img/Midnight_Paddlefish.webp"
+                class="fish-icon"
+              />
+            </td>
+            <td class="fish-name">Midnight Paddlefish</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>Night</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Mirror_Carp.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Mirror Carp</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Mottled_Gobi.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Mottled Gobi</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Mudminnow.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Mudminnow</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="none">None</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Mutated_Angler.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Mutated Angler</td>
+            <td data-location="caves">Caves</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Oily_Anchovy.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Mutated Angler</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Orange_Bluegill.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Mutated Angler</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Paddlefish.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Paddlefish</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>Morning, Day, Evening</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Painted_Perch.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Painted Perch</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Platinum_Chad.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Platinum Chad</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Prism_Trout.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Prism Trout</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="worm">Worm</td>
+            <td>Morning, Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Radiant_Sunfish.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Radiant Sunfish</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Rainbow_Trout.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Rainbow Trout</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="none">None</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img
+                src="assets/img/Red-bellied_Piranha.webp"
+                class="fish-icon"
+              />
+            </td>
+            <td class="fish-name">Red-bellied Piranha</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Ribbontail_Ray.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Ribbontail Ray</td>
+            <td data-location="bahari-coast">Bahari Coast</td>
+            <td data-bait="worm">Worm</td>
+            <td>Morning, Evening</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Rosy_Bitterling.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Rosy Bitterling</td>
+            <td data-location="bahari-rivers">Bahari Rivers</td>
+            <td data-bait="none">None</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Sardine.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Sardine</td>
+            <td data-location="bahari-coast">Bahari Coast</td>
+            <td data-bait="none">None</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Scarlet_Koi.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Scarlet Koi</td>
+            <td data-location="ponds">Ponds</td>
+            <td data-bait="glow-worm">Glow Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Shimmerfin.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Shimmerfin</td>
+            <td data-location="kilima-lake">Kilima Lake</td>
+            <td data-bait="worm">Worm</td>
+            <td>All Day</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
+              <img src="assets/img/Silver_Salmon.webp" class="fish-icon" />
+            </td>
+            <td class="fish-name">Silver Salmon</td>
+            <td data-location="kilima-rivers">Kilima Rivers</td>
+            <td data-bait="none">None</td>
+            <td>Evening, Night</td>
+            <td><input type="checkbox" /></td>
+            <td><input type="checkbox" data-type="one-star" /></td>
+          </tr>
+          <tr>
+            <td class="fish-image">
               <img src="assets/img/Silvery_Minnow.webp" class="fish-icon" />
             </td>
             <td class="fish-name">Silvery Minnow</td>
@@ -470,7 +952,7 @@
       </table>
     </main>
     <script src="assets/js/script.js"></script>
-    <footer class="sticky-bottom bg-dark">
+    <footer class="bg-dark fixed-bottom">
       <ul class="d-flex justify-content-end p-2 mb-0">
         <a class="icon" href="https://discord.gg/GEXR74By" target="_blank"
           ><i class="bi bi-discord"></i
