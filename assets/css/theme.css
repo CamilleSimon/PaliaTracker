@@ -50,3 +50,7 @@ main {
   height: 44px;
   vertical-align: text-bottom;
 }
+
+td {
+  height: auto;
+}
