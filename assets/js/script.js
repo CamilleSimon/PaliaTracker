@@ -54,39 +54,37 @@ $(document).ready(function () {
   $("select")
     .on("change", function () {
       var valueLocation = $("select#location option:selected").attr("value"),
-        valueBait = $("select#bait option:selected").attr("value");
-
-      if (!valueBait && !valueLocation) {
-        $("table > tbody > tr").each(function () {
-          $(this).toggle(true);
-        });
-      } else if (valueLocation && !valueBait) {
-        $("table > tbody > tr").each(function () {
-          $(this).toggle(
-            $(this).find("[data-location=" + valueLocation + "]").length > 0
-          );
-        });
-      } else if (!valueLocation && valueBait) {
-        $("table > tbody > tr").each(function () {
-          $(this).toggle(
-            $(this).find("[data-bait=" + valueBait + "]").length > 0
-          );
-        });
-      } else {
-        $("table > tbody > tr").each(function () {
-          $(this).toggle(
-            $(this).find("[data-bait=" + valueBait + "]").length > 0 &&
-              $(this).find("[data-location=" + valueLocation + "]").length > 0
-          );
-        });
-      }
+        valueBait = $("select#bait option:selected").attr("value"),
+        valueFilter = $("select#filter option:selected").attr("value");
+      console.log(
+        "Location: " +
+          valueLocation +
+          ", bait: " +
+          valueBait +
+          ", filter: " +
+          valueFilter
+      );
+      $("table > tbody > tr").each(function () {
+        let show = true;
+        if (valueBait)
+          show =
+            show && $(this).find("[data-bait=" + valueBait + "]").length > 0;
+        if (valueLocation)
+          show =
+            show &&
+            $(this).find("[data-location=" + valueLocation + "]").length > 0;
+        if (valueFilter)
+          show =
+            show && !$(this).find("[data-type=" + valueFilter + "]")[0].checked;
+        $(this).toggle(show);
+      });
     })
     .trigger("change");
 });
 
 $(document).ready(function () {
   $("input:checkbox").change(function () {
-    var isStarFish = !$(this).attr("data-type") ? false : true,
+    var isStarFish = !($(this).attr("data-type") == "one-star") ? false : true,
       fishName = $(this).parent().parent().children()[1].innerHTML;
     if ($(this).is(":checked")) {
       saveFish(fishName, isStarFish);
@@ -127,7 +125,6 @@ $(document).ready(function () {
   $("table > tbody > tr").each(function () {
     var name = $(this).children()[1].innerHTML;
     var stored = JSON.parse(localStorage.getItem(name));
-    console.log($(this).children()[5].firstChild.checked);
     if (stored) {
       if (stored[0] == true) {
         $(this).children()[5].firstChild.checked = true;
