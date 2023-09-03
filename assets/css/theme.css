@@ -1,0 +1,45 @@
+/* Not working on Firefox
+tr:has(input[type="checkbox"]:checked) {
+  opacity: 0.4;
+} */
+
+table thead tr th:after {
+  right: 2px;
+}
+
+table thead tr th.sort-asc:after {
+  content: "\25b4";
+}
+
+table thead tr th.sort-desc:after {
+  content: "\25be";
+}
+
+.fish-icon {
+  height: 44px;
+  width: 44px;
+}
+
+.fish-image {
+  display: flex;
+  justify-content: center;
+}
+
+#filters {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#filters > * {
+  margin: 0 20px;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.icon {
+  color: white;
+  margin: 5px;
+}
