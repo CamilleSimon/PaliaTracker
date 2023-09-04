@@ -31,7 +31,7 @@ table thead tr th.sort-desc:after {
 }
 
 #filters > * {
-  margin: 0 20px;
+  margin: 5px 10px 0 10px;
 }
 
 main {
