@@ -93,3 +93,7 @@ table thead tr th.sort-desc:after {
   color: #45b2da;
   margin-right: 5px;
 }
+
+.no-border {
+  border: unset;
+}

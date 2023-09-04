@@ -53,9 +53,11 @@
         class="collapse navbar-collapse justify-content-center"
         id="navbarSupportedContent"
       >
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link" href="/fish">Fishes</a>
+        <ul class="nav flex-column mt-1">
+          <li class="nav-item d-flex flex-row align-items-center">
+            <a class="nav-link" href="fish.html"
+              ><img src="assets/fish-solid.svg" class="cat-icon" /> Fishes</a
+            >
           </li>
           <!--           <li class="nav-item">
             <a class="nav-link" href="/bug">Bugs</a>
@@ -86,7 +88,7 @@
       <!--Main-->
       <main class="container m-auto">
         <div class="d-flex flex-column justify-content-between h-100">
-          <article class="m-2 p-2">
+          <article>
             <div id="filters" class="d-flex flex-column flex-md-row">
               <input id="search" type="text" placeholder="Name" />
               <select id="location">
@@ -114,7 +116,7 @@
             <table class="table table-dark align-middle" id="fish-table">
               <thead>
                 <tr>
-                  <th class="no-sort"></th>
+                  <th class="no-sort d-none d-sm-block no-border"></th>
                   <th class="sort-asc">Name</th>
                   <th>Location</th>
                   <th>Bait</th>
@@ -125,7 +127,7 @@
               </thead>
               <tbody class="table-group-divider">
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Albino_Eel.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Albino Eel</td>
@@ -136,7 +138,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Alligator_Gar.webp"
                       class="fish-icon"
@@ -150,7 +152,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Ancient_Fish.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Ancient Fish</td>
@@ -161,7 +163,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bahari_Bass.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Bahari Bass</td>
@@ -172,7 +174,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bahari_Bream.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Bahari Bream</td>
@@ -183,7 +185,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bahari_Pike.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Bahari Pike</td>
@@ -194,7 +196,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Barracuda.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Barracuda</td>
@@ -205,7 +207,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bat_Ray.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Bat Ray</td>
@@ -216,7 +218,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Beluga_Sturgeon.webp"
                       class="fish-icon"
@@ -230,7 +232,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Black_Sea_Bass.webp"
                       class="fish-icon"
@@ -244,7 +246,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Blobfish.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Blobfish</td>
@@ -255,7 +257,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Blue_Marlin.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Blue Marlin</td>
@@ -266,7 +268,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Blue_Spotted_Ray.webp"
                       class="fish-icon"
@@ -280,7 +282,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bluefin_Tuna.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Bluefin Tuna</td>
@@ -291,7 +293,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Cactus_Moray.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Cactus Moray</td>
@@ -302,7 +304,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Calico_Koi.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Calico Koi</td>
@@ -313,7 +315,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Cantankerous_Koi.webp"
                       class="fish-icon"
@@ -327,7 +329,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Channel_Catfish.webp"
                       class="fish-icon"
@@ -341,7 +343,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Chub.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Chub</td>
@@ -352,7 +354,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Cloudfish.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Cloudfish</td>
@@ -363,7 +365,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Crimson_Fangtooth.webp"
                       class="fish-icon"
@@ -377,7 +379,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Crucian_Carp.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Crucian Carp</td>
@@ -388,7 +390,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Cutthroat_Trout.webp"
                       class="fish-icon"
@@ -402,7 +404,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Dawnray.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Dawnray</td>
@@ -413,7 +415,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Duskray.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Duskray</td>
@@ -424,7 +426,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Enchanted_Pupfish.webp"
                       class="fish-icon"
@@ -438,7 +440,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Energized_Piranha.webp"
                       class="fish-icon"
@@ -452,7 +454,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Eyeless_Minnow.webp"
                       class="fish-icon"
@@ -466,7 +468,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Fairy_Carp.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Fairy Carp</td>
@@ -477,7 +479,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Fathead_Minnow.webp"
                       class="fish-icon"
@@ -491,7 +493,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Flametongue_Ray.webp"
                       class="fish-icon"
@@ -505,7 +507,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Freshwater_Eel.webp"
                       class="fish-icon"
@@ -519,7 +521,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Giant_Goldfish.webp"
                       class="fish-icon"
@@ -533,7 +535,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Giant_Kilima_Stingray.webp"
                       class="fish-icon"
@@ -547,7 +549,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Gillyfin.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Gillyfin</td>
@@ -558,7 +560,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Golden_Salmon.webp"
                       class="fish-icon"
@@ -572,7 +574,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Honey_Loach.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Honey Loach</td>
@@ -583,7 +585,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Hypnotic_Moray.webp"
                       class="fish-icon"
@@ -597,7 +599,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Indigo_Lamprey.webp"
                       class="fish-icon"
@@ -611,7 +613,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Kenli's_Carp.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Kenli's Carp</td>
@@ -622,7 +624,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Kilima_Catfish.webp"
                       class="fish-icon"
@@ -636,7 +638,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Kilima_Greyling.webp"
                       class="fish-icon"
@@ -650,7 +652,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Kilima_Redfin.webp"
                       class="fish-icon"
@@ -664,7 +666,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Largemouth_Bass.webp"
                       class="fish-icon"
@@ -678,7 +680,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Long_Nosed_Unicorn_Fish.webp"
                       class="fish-icon"
@@ -692,7 +694,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Midnight_Paddlefish.webp"
                       class="fish-icon"
@@ -706,7 +708,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Mirror_Carp.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Mirror Carp</td>
@@ -717,7 +719,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Mottled_Gobi.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Mottled Gobi</td>
@@ -728,7 +730,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Mudminnow.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Mudminnow</td>
@@ -739,7 +741,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Mutated_Angler.webp"
                       class="fish-icon"
@@ -753,7 +755,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Oily_Anchovy.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Oily Anchovy</td>
@@ -764,7 +766,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Orange_Bluegill.webp"
                       class="fish-icon"
@@ -778,7 +780,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Paddlefish.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Paddlefish</td>
@@ -789,7 +791,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Painted_Perch.webp"
                       class="fish-icon"
@@ -803,7 +805,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Platinum_Chad.webp"
                       class="fish-icon"
@@ -817,7 +819,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Prism_Trout.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Prism Trout</td>
@@ -828,7 +830,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Radiant_Sunfish.webp"
                       class="fish-icon"
@@ -842,7 +844,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Rainbow_Trout.webp"
                       class="fish-icon"
@@ -856,7 +858,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Red-bellied_Piranha.webp"
                       class="fish-icon"
@@ -870,7 +872,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Ribbontail_Ray.webp"
                       class="fish-icon"
@@ -884,7 +886,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Rosy_Bitterling.webp"
                       class="fish-icon"
@@ -898,7 +900,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Sardine.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Sardine</td>
@@ -909,7 +911,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Scarlet_Koi.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Scarlet Koi</td>
@@ -920,7 +922,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Shimmerfin.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Shimmerfin</td>
@@ -931,7 +933,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Silver_Salmon.webp"
                       class="fish-icon"
@@ -945,7 +947,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Silvery_Minnow.webp"
                       class="fish-icon"
@@ -959,7 +961,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Smallmouth_Bass.webp"
                       class="fish-icon"
@@ -973,7 +975,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Spotted_Bullhead.webp"
                       class="fish-icon"
@@ -987,7 +989,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Stalking_Catfish.webp"
                       class="fish-icon"
@@ -1001,7 +1003,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Stickleback.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Stickleback</td>
@@ -1012,7 +1014,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Stonefish.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Stonefish</td>
@@ -1023,7 +1025,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Stormray.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Stormray</td>
@@ -1034,7 +1036,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Striped_Dace.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Striped Dace</td>
@@ -1045,7 +1047,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Striped_Sturgeon.webp"
                       class="fish-icon"
@@ -1059,7 +1061,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Swordfin_Eel.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Swordfin Eel</td>
@@ -1070,7 +1072,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Thundering_Eel.webp"
                       class="fish-icon"
@@ -1084,7 +1086,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Umbran_Carp.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Umbran Carp</td>
@@ -1095,7 +1097,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Void_Ray.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Void Ray</td>
@@ -1106,7 +1108,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Willow_Lamprey.webp"
                       class="fish-icon"
@@ -1120,7 +1122,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Yellow_Perch.webp" class="fish-icon" />
                   </td>
                   <td class="fish-name">Yellow Perch</td>
@@ -1131,7 +1133,7 @@
                   <td><input type="checkbox" data-type="one-star" /></td>
                 </tr>
                 <tr>
-                  <td class="fish-image">
+                  <td class="fish-image d-none d-sm-block">
                     <img
                       src="assets/img/Yellowfin_Tuna.webp"
                       class="fish-icon"
