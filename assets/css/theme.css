@@ -25,7 +25,12 @@ table thead tr th.sort-desc:after {
   width: 44px;
 }
 
-.fish-image {
+.bug-icon {
+  height: 44px;
+}
+
+.fish-image,
+.bug-image {
   text-align: center;
 }
 

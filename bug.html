@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link href="assets/css/theme.css" rel="stylesheet" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" href="assets/fav.png" />
+    <title>Bugs Tracker</title>
+  </head>
+  <body class="d-flex flex-column h-auto">
+    <!--Header-->
+    <nav class="navbar color-2dp navbar-dark sticky-top shadow p-2">
+      <button
+        class="navbar-toggler d-md-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="index.html" class="navbar-brand mb-0 h1 p-0">
+        <div class="d-flex align-items-center">
+          <img src="assets/logo.svg" class="logo d-inline-block" />
+          <span>Bugs Tracker</span>
+        </div>
+      </a>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarSupportedContent"
+      >
+        <ul class="nav flex-column mt-1">
+          <li class="nav-item d-flex flex-row align-items-center">
+            <a class="nav-link" href="fish.html"
+              ><img src="assets/fish-solid.svg" class="cat-icon" /> Fishes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bug.html"
+              ><img src="assets/bug-solid.svg" class="cat-icon" /> Bugs</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="d-flex h-100">
+      <!--Sidebar-->
+      <aside
+        class="d-inline-flex flex-column collapse color-1dp sidebar d-md-block d-none"
+      >
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column ml-2">
+            <li class="nav-item d-flex flex-row align-items-center">
+              <a class="nav-link" href="fish.html"
+                ><img src="assets/fish-solid.svg" class="cat-icon" /> Fishes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bug.html"
+                ><img src="assets/bug-solid.svg" class="cat-icon" /> Bugs</a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!--Main-->
+      <main class="container m-auto">
+        <div class="d-flex flex-column justify-content-between h-100">
+          <article>
+            <div id="filters" class="d-flex flex-column flex-md-row">
+              <input id="search" type="text" placeholder="Name" />
+              <select id="location">
+                <option value="">All Locations</option>
+                <option value="bahari-bay">Bahari Bay</option>
+                <option value="kilima-valley">Kilima Valley</option>
+                <option value="both">Both</option>
+              </select>
+              <select id="filter">
+                <option value="">Show All</option>
+                <option value="normal">Missing Normal</option>
+                <option value="one-star">Missing Star</option>
+                <option value="any">Missing Any</option>
+              </select>
+            </div>
+            <table class="table table-dark align-middle" id="fish-table">
+              <thead>
+                <tr>
+                  <th class="no-sort d-none d-sm-block no-border"></th>
+                  <th class="sort-asc">Name</th>
+                  <th>Location</th>
+                  <th>Time</th>
+                  <th></th>
+                  <th><i class="bi bi-star-fill"></i></th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Ancient_Amber_Beetle.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Ancient Amber Beetle</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Azure_Stonehopper.png"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Azure Stonehopper</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img src="assets/img/Bahari_Bee.webp" class="bug-icon" />
+                  </td>
+                  <td class="fish-name">Bahari Bee</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img src="assets/img/Bahari_Crab.webp" class="bug-icon" />
+                  </td>
+                  <td class="fish-name">Bahari Crab</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Bahari_Glowbug.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Bahari Glowbug</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Evening, Night</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Brighteye_Butterfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Brighteye Butterfly</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Brushtail_Dragonfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Brushtail Dragonfly</td>
+                  <td data-location="both">Bahari Bay, Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Cerulean_Cicada.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Cerulean Cicada</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Common_Bark_Cicada.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Common Bark Cicada</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Common_Blue_Butterfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Common Blue Butterfly</td>
+                  <td data-location="both">Bahari Bay, Kilima Valley</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Common_Field_Cricket.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Common Field Cricket</td>
+                  <td data-location="both">Bahari Bay, Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Duskwing_Butterfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Duskwing Butterfly</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img src="assets/img/Fairy_Mantis.webp" class="bug-icon" />
+                  </td>
+                  <td class="fish-name">Fairy_Mantis</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Firebreathing_Dragonfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Firebreathing Dragonfly</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Garden_Ladybug.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Garden Ladybug</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Garden_Leafhopper.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Garden Leafhopper</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img src="assets/img/Garden_Mantis.webp" class="bug-icon" />
+                  </td>
+                  <td class="fish-name">Garden Mantis</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Garden_Millipede.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Garden Millipede</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img src="assets/img/Garden_Snail.webp" class="bug-icon" />
+                  </td>
+                  <td class="fish-name">Garden Snail</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Golden_Glory_Bee.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Golden Glory Bee</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Gossamer_Veil_Moth.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Gossamer Veil Moth</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>Evening, Night</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Hairy_Millipede.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Hairy Millipede</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Inky_Dragonfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Inky Dragonfly</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Jewelwing_Dragonfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Jewelwing Dragonfly</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Kilima_Night_Moth.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Kilima Night Moth</td>
+                  <td data-location="both">Bahari Bay, Kilima Valley</td>
+                  <td>Evening, Night</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Leafstalker_Mantis.png"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Leafstalker Mantis</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Lunar_Fairy_Moth.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Lunar Fairy Moth</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Evening, Night</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Paper_Lantern_Bug.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Paper Lantern Bug</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Evening, Night</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Princess_Ladybug.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Princess Ladybug</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Proudhorned_Stag_Beetle.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Proudhorned Stag Beetle</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Rainbow-Tipped_Butterfly.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Rainbow-Tipped Butterfly</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Raspberry_Beetle.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Raspberry Beetle</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Scintillating_Centipede.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Scintillating Centipede</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Spineshell_Crab.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Spineshell Crab</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Spitfire_Cicada.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Spitfire Cicada</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Morning, Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Spotted_Mantis.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Spotted Mantis</td>
+                  <td data-location="kilima-valley">Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Spotted_Stinkbug.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Spotted Stinkbug</td>
+                  <td data-location="both">Bahari Bay, Kilima Valley</td>
+                  <td>All Day</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img
+                      src="assets/img/Stripeshell_Snails.webp"
+                      class="bug-icon"
+                    />
+                  </td>
+                  <td class="fish-name">Stripeshell Snail</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Evening, Night</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+                <tr>
+                  <td class="bug-image d-none d-sm-block">
+                    <img src="assets/img/Vampire_Crab.webp" class="bug-icon" />
+                  </td>
+                  <td class="fish-name">Vampire Crabl</td>
+                  <td data-location="bahari-bay">Bahari Bay</td>
+                  <td>Evening, Night</td>
+                  <td><input type="checkbox" data-type="normal" /></td>
+                  <td><input type="checkbox" data-type="one-star" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <!--Footer-->
+          <footer
+            class="flex-row d-flex justify-content-center align-items-baseline"
+          >
+            <p class="fs-6 mb-0">Created by Shaykan Tel'maris |</p>
+            <a class="icon" href="https://discord.gg/GEXR74By" target="_blank"
+              ><i class="bi bi-discord"></i
+            ></a>
+            <a class="icon" href="" target="_blank"
+              ><i class="bi bi-github"></i
+            ></a>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
