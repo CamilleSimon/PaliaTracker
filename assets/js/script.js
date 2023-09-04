@@ -1,69 +1,51 @@
-$(document).on("click", "table thead tr th:not(.no-sort)", function () {
-  var table = $(this).parents("table");
-  var rows = $(this)
-    .parents("table")
-    .find("tbody tr")
-    .toArray()
-    .sort(TableComparer($(this).index()));
-  var dir = $(this).hasClass("sort-asc") ? "desc" : "asc";
-
-  if (dir == "desc") {
-    rows = rows.reverse();
-  }
-
-  for (var i = 0; i < rows.length; i++) {
-    table.append(rows[i]);
-  }
-
-  table.find("thead tr th").removeClass("sort-asc").removeClass("sort-desc");
-  $(this)
-    .removeClass("sort-asc")
-    .removeClass("sort-desc")
-    .addClass("sort-" + dir);
-});
-
-function TableComparer(index) {
-  return function (a, b) {
-    var val_a = TableCellValue(a, index);
-    var val_b = TableCellValue(b, index);
-    var result =
-      $.isNumeric(val_a) && $.isNumeric(val_b)
-        ? val_a - val_b
-        : val_a.toString().localeCompare(val_b);
-
-    return result;
-  };
-}
-
-function TableCellValue(row, index) {
-  return $(row).children("td").eq(index).text();
-}
-
 $(document).ready(function () {
+  /**
+   * Sort column when click on column header
+   * */
+  $("table thead tr th:not(.no-sort)").on("click", function () {
+    let table = $(this).parents("table"),
+      rows = $(this)
+        .parents("table")
+        .find("tbody tr")
+        .toArray()
+        .sort(TableComparer($(this).index())),
+      dir = $(this).hasClass("sort-asc") ? "desc" : "asc";
+
+    if (dir == "desc") {
+      rows = rows.reverse();
+    }
+
+    for (let i = 0; i < rows.length; i++) {
+      table.append(rows[i]);
+    }
+
+    table.find("thead tr th").removeClass("sort-asc").removeClass("sort-desc");
+    $(this)
+      .removeClass("sort-asc")
+      .removeClass("sort-desc")
+      .addClass("sort-" + dir);
+  });
+
+  /**
+   * Search in Name column
+   */
   $("#search").on("keyup", function () {
-    var value = $(this).val().toLowerCase();
+    const value = $(this).val().toLowerCase();
     $("table > tbody > tr").each(function () {
       $(this).toggle(
         $(this).children(".fish-name").text().toLowerCase().indexOf(value) > -1
       );
     });
   });
-});
 
-$(document).ready(function () {
+  /**
+   * Filter table in function of filters
+   */
   $("select")
     .on("change", function () {
-      var valueLocation = $("select#location option:selected").attr("value"),
+      const valueLocation = $("select#location option:selected").attr("value"),
         valueBait = $("select#bait option:selected").attr("value"),
         valueFilter = $("select#filter option:selected").attr("value");
-      console.log(
-        "Location: " +
-          valueLocation +
-          ", bait: " +
-          valueBait +
-          ", filter: " +
-          valueFilter
-      );
       $("table > tbody > tr").each(function () {
         let show = true;
         if (valueBait)
@@ -73,29 +55,59 @@ $(document).ready(function () {
           show =
             show &&
             $(this).find("[data-location=" + valueLocation + "]").length > 0;
-        if (valueFilter)
-          show =
-            show && !$(this).find("[data-type=" + valueFilter + "]")[0].checked;
+        if (valueFilter) {
+          if (valueFilter != "any")
+            show =
+              show &&
+              !$(this).find("[data-type=" + valueFilter + "]")[0].checked;
+          else {
+            show =
+              show &&
+              (!$(this).find("[data-type=normal]")[0].checked ||
+                !$(this).find("[data-type=one-star]")[0].checked);
+          }
+        }
         $(this).toggle(show);
       });
     })
     .trigger("change");
-});
 
-$(document).ready(function () {
+  /**
+   * Event on checkbox click
+   */
   $("input:checkbox").change(function () {
-    var isStarFish = !($(this).attr("data-type") == "one-star") ? false : true,
+    /** Save checkbox status */
+    const dataType = $(this).attr("data-type"),
+      isStarFish = !(dataType == "one-star") ? false : true,
       fishName = $(this).parent().parent().children()[1].innerHTML;
     if ($(this).is(":checked")) {
       saveFish(fishName, isStarFish);
     } else {
       deleteFish(fishName, isStarFish);
     }
+    /** Check if row needs to be hidden */
+    const valueFilter = $("select#filter option:selected").attr("value");
+    console.log("filterValue: " + valueFilter + ", dataType: " + dataType);
+    if (valueFilter == dataType) {
+      $(this).parent().parent().toggle();
+    } else if (valueFilter == "any") {
+      const tr = $(this).parent().parent(),
+        normalCheckbox = tr.find("[data-type=normal]")[0].checked,
+        oneStarCheckbox = tr.find("[data-type=one-star]")[0].checked;
+      console.log("normal: " + normalCheckbox + ", star: " + oneStarCheckbox);
+      console.log(tr);
+      tr.toggle(!(normalCheckbox && oneStarCheckbox));
+    }
   });
 });
 
+/**
+ * Save checkbox status in LocalStorage when checkbox is checked
+ * @param {String} name
+ * @param {Boolean} isStarFish
+ */
 function saveFish(name, isStarFish) {
-  var stored = JSON.parse(localStorage.getItem(name));
+  let stored = JSON.parse(localStorage.getItem(name));
   if (!stored) {
     stored = [];
     stored.push(!isStarFish, isStarFish);
@@ -109,8 +121,13 @@ function saveFish(name, isStarFish) {
   localStorage.setItem(name, JSON.stringify(stored));
 }
 
+/**
+ * Save checkbox status in LocalStorage when checkbox is unchecked
+ * @param {String} name
+ * @param {Boolean} isStarFish
+ */
 function deleteFish(name, isStarFish) {
-  var stored = JSON.parse(localStorage.getItem(name));
+  let stored = JSON.parse(localStorage.getItem(name));
   if (stored) {
     if (isStarFish) {
       stored[1] = false;
@@ -121,10 +138,13 @@ function deleteFish(name, isStarFish) {
   localStorage.setItem(name, JSON.stringify(stored));
 }
 
-$(document).ready(function () {
+/**
+ * Restore checkboxes with the stored status
+ */
+function init() {
   $("table > tbody > tr").each(function () {
-    var name = $(this).children()[1].innerHTML;
-    var stored = JSON.parse(localStorage.getItem(name));
+    let name = $(this).children()[1].innerHTML,
+      stored = JSON.parse(localStorage.getItem(name));
     if (stored) {
       if (stored[0] == true) {
         $(this).children()[5].firstChild.checked = true;
@@ -134,4 +154,31 @@ $(document).ready(function () {
       }
     }
   });
-});
+}
+
+/**
+ *
+ * @param {int} index
+ * @returns
+ */
+function TableComparer(index) {
+  return function (a, b) {
+    let valA = TableCellValue(a, index),
+      valB = TableCellValue(b, index),
+      result =
+        $.isNumeric(valA) && $.isNumeric(valB)
+          ? valA - valB
+          : valA.toString().localeCompare(valB);
+    return result;
+  };
+}
+
+/**
+ *
+ * @param {*} row
+ * @param {*} index
+ * @returns
+ */
+function TableCellValue(row, index) {
+  return $(row).children("td").eq(index).text();
+}
