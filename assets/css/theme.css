@@ -3,6 +3,11 @@ tr:has(input[type="checkbox"]:checked) {
   opacity: 0.4;
 } */
 
+html,
+body {
+  height: 100% !important;
+}
+
 table thead tr th:after {
   right: 2px;
 }
@@ -34,18 +39,57 @@ table thead tr th.sort-desc:after {
   margin: 5px 10px 0 10px;
 }
 
-main {
-  margin-top: 20px;
-  margin-bottom: 49px;
-}
-
 .icon {
   color: white;
   margin: 5px;
 }
 
 .logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+}
+
+.logo-big {
   width: 44px;
   height: 44px;
-  vertical-align: text-bottom;
+  margin-right: 10px;
+}
+
+.color-2dp {
+  background-color: #373b3e;
+}
+.color-1dp {
+  background-color: rgb(44, 48, 52);
+}
+
+.navbar-brand {
+  margin-right: 0px;
+}
+
+.sidebar {
+  width: 200px;
+  height: auto;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 48px;
+}
+
+.footer-sticky {
+  position: sticky;
+  bottom: 0px;
+  right: 0px;
+}
+
+.nav-link {
+  color: rgb(222, 226, 230);
+}
+
+.cat-icon {
+  width: 20px;
+  height: 20px;
+  color: #45b2da;
+  margin-right: 5px;
 }
