@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  init();
+
   /**
    * Sort column when click on column header
    * */
@@ -147,10 +149,10 @@ function init() {
       stored = JSON.parse(localStorage.getItem(name));
     if (stored) {
       if (stored[0] == true) {
-        $(this).children()[5].firstChild.checked = true;
+        $(this).children().find("[data-type=normal]")[0].checked = true;
       }
       if (stored[1] == true) {
-        $(this).children()[6].firstChild.checked = true;
+        $(this).children().find("[data-type=one-star]")[0].checked = true;
       }
     }
   });
