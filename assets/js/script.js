@@ -36,7 +36,7 @@ $(document).ready(function () {
     $("table > tbody > tr").each(function () {
       console.log($(this).children(".fish-name"));
       $(this).toggle(
-        $(this).children(".name").text().toLowerCase().indexOf(value) > -1
+        $(this).children(".name").text().toLowerCase().indexOf(value) == 0
       );
     });
   });
