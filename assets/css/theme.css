@@ -73,13 +73,18 @@ table thead tr th.sort-desc:after {
 }
 
 .sidebar {
+  position: fixed;
   width: 200px;
-  height: auto;
+  height: 100%;
 }
 
 .sidebar-sticky {
-  position: sticky;
+  position: fixed;
   top: 48px;
+}
+
+.aside {
+  width: 200px;
 }
 
 .footer-sticky {
@@ -126,4 +131,7 @@ th {
 
 .uncommon {
   background-color: #477c3a !important;
+}
+
+main {
 }
