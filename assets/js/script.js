@@ -32,13 +32,7 @@ $(document).ready(function () {
    * Search in Name column
    */
   $("#search").on("keyup", function () {
-    const value = $(this).val().toLowerCase();
-    $("table > tbody > tr").each(function () {
-      console.log($(this).children(".fish-name"));
-      $(this).toggle(
-        $(this).children(".name").text().toLowerCase().indexOf(value) == 0
-      );
-    });
+    listVisibilityUpdate();
   });
 
   /**
@@ -46,37 +40,7 @@ $(document).ready(function () {
    */
   $("select")
     .on("change", function () {
-      const valueLocation = $("select#location option:selected").attr("value"),
-        valueBait = $("select#bait option:selected").attr("value"),
-        valueFilter = $("select#filter option:selected").attr("value"),
-        valueRarity = $("select#rarity option:selected").attr("value");
-      $("table > tbody > tr").each(function () {
-        let show = true;
-        if (valueBait)
-          show =
-            show && $(this).find("[data-bait=" + valueBait + "]").length > 0;
-        if (valueLocation)
-          show =
-            show &&
-            $(this).find("[data-location=" + valueLocation + "]").length > 0;
-        if (valueRarity)
-          show =
-            show &&
-            $(this).find("[data-rarity=" + valueRarity + "]").length > 0;
-        if (valueFilter) {
-          if (valueFilter != "any")
-            show =
-              show &&
-              !$(this).find("[data-type=" + valueFilter + "]")[0].checked;
-          else {
-            show =
-              show &&
-              (!$(this).find("[data-type=normal]")[0].checked ||
-                !$(this).find("[data-type=one-star]")[0].checked);
-          }
-        }
-        $(this).toggle(show);
-      });
+      listVisibilityUpdate();
     })
     .trigger("change");
 
@@ -108,6 +72,45 @@ $(document).ready(function () {
     }
   });
 });
+
+/**
+ * List update
+ */
+function listVisibilityUpdate() {
+  const valueLocation = $("select#location option:selected").attr("value"),
+    valueBait = $("select#bait option:selected").attr("value"),
+    valueFilter = $("select#filter option:selected").attr("value"),
+    valueRarity = $("select#rarity option:selected").attr("value");
+  valueName = $("#search").val().toLowerCase();
+  $("table > tbody > tr").each(function () {
+    let show = true;
+    if (valueName)
+      show =
+        show &&
+        $(this).children(".name").text().toLowerCase().indexOf(valueName) == 0;
+    if (valueBait)
+      show = show && $(this).find("[data-bait=" + valueBait + "]").length > 0;
+    if (valueLocation)
+      show =
+        show &&
+        $(this).find("[data-location=" + valueLocation + "]").length > 0;
+    if (valueRarity)
+      show =
+        show && $(this).find("[data-rarity=" + valueRarity + "]").length > 0;
+    if (valueFilter) {
+      if (valueFilter != "any")
+        show =
+          show && !$(this).find("[data-type=" + valueFilter + "]")[0].checked;
+      else {
+        show =
+          show &&
+          (!$(this).find("[data-type=normal]")[0].checked ||
+            !$(this).find("[data-type=one-star]")[0].checked);
+      }
+    }
+    $(this).toggle(show);
+  });
+}
 
 /**
  * Save checkbox status in LocalStorage when checkbox is checked
