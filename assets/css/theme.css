@@ -31,8 +31,22 @@ table thead tr th.sort-desc:after {
 .fish-image,
 .bug-image {
   text-align: center;
+}
+
+td {
   border-bottom: none;
   border-top: 1px solid rgb(55, 59, 62);
+}
+
+@-moz-document url-prefix() {
+  td {
+    border-bottom: 1px solid rgb(55, 59, 62);
+    border-top: unset;
+  }
+}
+
+/* Chrome version 22-28 */
+@media screen and(-webkit-min-device-pixel-ratio:0) {
 }
 
 #filters {
