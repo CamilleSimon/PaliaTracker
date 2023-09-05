@@ -150,9 +150,12 @@ function deleteFish(name, isStarFish) {
 }
 
 /**
- * Restore checkboxes with the stored status
+ * Page initialization
  */
 function init() {
+  /**
+   * Restore checkboxes with the stored status
+   */
   $("table > tbody > tr").each(function () {
     let name = $(this).children()[1].innerHTML,
       stored = JSON.parse(localStorage.getItem(name));
@@ -165,6 +168,38 @@ function init() {
       }
     }
   });
+  /**
+   * Hide columns
+   */
+  //mobile
+  console.log($(window).width());
+  if ($(window).width() < 768) {
+    hideColumnClass("fish-image");
+    hideColumnClass("bug-image");
+    hideColumnClass("show-rarity");
+  }
+}
+
+/**
+ * Hide specific column
+ * @param {*} name
+ */
+function hideColumnClass(name) {
+  if (name)
+    $("." + name).each(function () {
+      $(this).toggle();
+    });
+}
+
+/**
+ * Show specific column
+ * @param {*} name
+ */
+function hideColumnClass(name) {
+  if (name)
+    $("." + name).each(function () {
+      $(this).show();
+    });
 }
 
 /**

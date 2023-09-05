@@ -148,5 +148,12 @@ th {
   background-color: #477c3a !important;
 }
 
-main {
+tr {
+  height: 62px;
+}
+
+@media (min-width: 576px) {
+  html {
+    /*font-size: medium;*/
+  }
 }
