@@ -82,24 +82,30 @@
           </li>
           <hr />
           <li class="nav-item">
-            <a class="nav-link disabled" href="https://palianpc.com/"
+            <a
+              class="nav-link disabled"
+              href="https://palianpc.com/"
+              target="_blank"
               >Outside Ressources</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://palianpc.com/"
+            <a class="nav-link" href="https://palianpc.com/" target="_blank"
               ><img src="assets/heart-solid.svg" class="cat-icon" /> Palia
               NPC</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://paliamaps.com/"
+            <a class="nav-link" href="https://paliamaps.com/" target="_blank"
               ><img src="assets/map-solid.svg" class="cat-icon" /> Interactive
               Maps</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://palia-garden-planner.vercel.app/"
+            <a
+              class="nav-link"
+              href="https://palia-garden-planner.vercel.app/"
+              target="_blank"
               ><img src="assets/seedling-solid.svg" class="cat-icon" /> Garden
               Planner</a
             >
@@ -125,7 +131,10 @@
             </li>
             <hr />
             <li class="nav-item">
-              <a class="nav-link disabled" href="https://palianpc.com/"
+              <a
+                class="nav-link disabled"
+                href="https://palianpc.com/"
+                target="_blank"
                 >Outside Ressources</a
               >
             </li>
@@ -136,7 +145,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://paliamaps.com/"
+              <a class="nav-link" href="https://paliamaps.com/" target="_blank"
                 ><img src="assets/map-solid.svg" class="cat-icon" /> Interactive
                 Maps</a
               >
@@ -145,6 +154,7 @@
               <a
                 class="nav-link"
                 href="https://palia-garden-planner.vercel.app/"
+                target="_blank"
                 ><img src="assets/seedling-solid.svg" class="cat-icon" /> Garden
                 Planner</a
               >
@@ -190,11 +200,11 @@
             <thead>
               <tr>
                 <th class="no-sort fish-image"></th>
-                <th class="sort-asc">Name</th>
+                <th class="sort-asc name">Name</th>
                 <th class="show-rarity">Rarity</th>
-                <th>Location</th>
-                <th>Bait</th>
-                <th>Time</th>
+                <th class="location">Location</th>
+                <th class="bait">Bait</th>
+                <th class="time">Time</th>
                 <th></th>
                 <th><i class="bi bi-star-fill"></i></th>
               </tr>
@@ -208,9 +218,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -226,9 +236,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -244,9 +256,11 @@
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -262,9 +276,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -280,9 +296,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -298,9 +316,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -316,9 +336,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="0-none">None</td>
-                <td class="evening night">Evening, Night</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -334,9 +356,9 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -355,9 +377,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -373,9 +397,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -391,9 +417,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -409,9 +435,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -430,9 +458,13 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td class="morning day evening">Morning, Day, Evening</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="morning day evening">
+                  Morning, Day, Evening
+                </td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -448,9 +480,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -466,9 +500,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td class="day night">Day, Night</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="day night">Day, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -484,9 +520,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -505,9 +541,9 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="0-none">None</td>
-                <td class="day night">Day, Night</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="day night">Day, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -526,9 +562,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -544,9 +582,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -562,9 +602,9 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td class="morning day">Morning, Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -583,9 +623,9 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -601,9 +641,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -622,9 +664,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -640,9 +684,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td>Morning</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="morning">Morning</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -658,9 +704,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td>Evening</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="evening">Evening</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -679,9 +727,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -700,9 +750,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -718,9 +770,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -736,9 +788,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="1-worm">Worm</td>
-                <td>Morning, Evening</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="morning evening">
+                  Morning, Evening
+                </td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -754,9 +808,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -775,9 +831,11 @@
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td class="day night">Day, Night</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="day night">Day, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -793,9 +851,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td class="evening night">Evening, Night</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -811,9 +871,9 @@
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -832,9 +892,13 @@
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td>Morning, Day, Evening</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="morning day evening">
+                  Morning, Day, Evening
+                </td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -850,9 +914,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -868,9 +934,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td class="day night">Day, Night</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="day night">Day, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -886,9 +954,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td class="day night">Day, Night</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="day night">Day, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -904,9 +974,9 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -922,9 +992,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td class="evening night">Evening, Night</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -940,9 +1012,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -958,9 +1032,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -979,9 +1053,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -997,9 +1073,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1018,9 +1096,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1039,9 +1119,11 @@
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td>Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="day">Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1060,9 +1142,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td>Night</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="night">Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1078,9 +1162,9 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1096,9 +1180,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1114,9 +1198,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1132,9 +1216,9 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1150,9 +1234,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1171,9 +1257,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1189,9 +1275,13 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td>Morning, Day, Evening</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="morning day evening">
+                  Morning, Day, Evening
+                </td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1207,9 +1297,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1225,9 +1317,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1243,9 +1337,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="1-worm">Worm</td>
-                <td class="day night">Day, Night</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="day night">Day, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1264,9 +1360,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1282,9 +1380,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1303,9 +1403,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1321,9 +1423,13 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="1-worm">Worm</td>
-                <td>Morning, Evening</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-type="morning evening">
+                  Morning, Evening
+                </td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1342,9 +1448,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1360,9 +1468,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1378,9 +1488,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1396,9 +1506,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1414,9 +1526,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td class="evening night">Evening, Night</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1432,9 +1546,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1453,9 +1569,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1474,9 +1592,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1495,9 +1615,9 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="ponds">Ponds</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td class="evening night">Evening, Night</td>
+                <td class="location" data-location="ponds">Ponds</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1513,9 +1633,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td class="day night">Day, Night</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="day night">Day, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1531,9 +1653,9 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1549,9 +1671,13 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td>Morning, Evening</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="morning evening">
+                  Morning, Evening
+                </td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1567,9 +1693,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="kilima-rivers">Kilima Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-rivers">
+                  Kilima Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1588,9 +1716,11 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-lake">Kilima Lake</td>
-                <td data-bait="1-worm">Worm</td>
-                <td class="evening night">Evening, Night</td>
+                <td class="location" data-location="kilima-lake">
+                  Kilima Lake
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1606,9 +1736,11 @@
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1624,9 +1756,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1642,9 +1776,9 @@
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1660,9 +1794,9 @@
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="caves">Caves</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="caves">Caves</td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1678,9 +1812,11 @@
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="1-worm">Worm</td>
-                <td>Night</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="1-worm">Worm</td>
+                <td class="time" data-time="night">Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1696,9 +1832,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-rivers">Bahari Rivers</td>
-                <td data-bait="0-none">None</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-rivers">
+                  Bahari Rivers
+                </td>
+                <td class="bait" data-bait="0-none">None</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -1714,9 +1852,11 @@
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-coast">Bahari Coast</td>
-                <td data-bait="2-glow-worm">Glow Worm</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-coast">
+                  Bahari Coast
+                </td>
+                <td class="bait" data-bait="2-glow-worm">Glow Worm</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>

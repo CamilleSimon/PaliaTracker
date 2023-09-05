@@ -172,9 +172,7 @@ function init() {
    * Hide columns
    */
   //mobile
-  console.log($(window).width() < 768);
   if ($(window).width() < 768) {
-    console.log("yes");
     hideColumnClass("fish-image");
     hideColumnClass("bug-image");
     hideColumnClass("show-rarity");
