@@ -106,3 +106,24 @@ table thead tr th.sort-desc:after {
 th {
   cursor: pointer;
 }
+
+.rarity {
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+.rare {
+  background-color: #067e8b !important;
+}
+
+.epic {
+  background-color: #3f2f8b !important;
+}
+
+.common {
+  background-color: #364052 !important;
+}
+
+.uncommon {
+  background-color: #477c3a !important;
+}

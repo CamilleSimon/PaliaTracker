@@ -108,6 +108,13 @@
           <article>
             <div id="filters" class="d-flex flex-column flex-md-row">
               <input id="search" type="text" placeholder="Name" />
+              <select id="rarity">
+                <option value="">All Rarity</option>
+                <option value="0-common">Common</option>
+                <option value="1-uncommon">Uncommon</option>
+                <option value="2-rare">Rare</option>
+                <option value="3-epic">Epic</option>
+              </select>
               <select id="location">
                 <option value="">All Locations</option>
                 <option value="bahari-coast">Bahari Coast</option>
@@ -119,9 +126,9 @@
               </select>
               <select id="bait">
                 <option value="">All Baits</option>
-                <option value="none">None</option>
-                <option value="worm">Worm</option>
-                <option value="glow-worm">Glow Worm</option>
+                <option value="0-none">None</option>
+                <option value="1-worm">Worm</option>
+                <option value="2-glow-worm">Glow Worm</option>
               </select>
               <select id="filter">
                 <option value="">Show All</option>
@@ -135,6 +142,7 @@
                 <tr>
                   <th class="no-sort d-none d-sm-block no-border"></th>
                   <th class="sort-asc">Name</th>
+                  <th>Rarity</th>
                   <th>Location</th>
                   <th>Bait</th>
                   <th>Time</th>
@@ -147,9 +155,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Albino_Eel.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Albino Eel</td>
+                  <td data-type="name">Albino Eel</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -161,9 +172,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Alligator Gar</td>
+                  <td data-type="name">Alligator Gar</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -172,9 +186,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Ancient_Fish.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Ancient Fish</td>
+                  <td data-type="name">Ancient Fish</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -183,9 +200,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bahari_Bass.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Bahari Bass</td>
+                  <td data-type="name">Bahari Bass</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -194,9 +214,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bahari_Bream.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Bahari Bream</td>
+                  <td data-type="name">Bahari Bream</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -205,9 +228,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bahari_Pike.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Bahari Pike</td>
+                  <td data-type="name">Bahari Pike</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -216,9 +242,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Barracuda.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Barracuda</td>
+                  <td data-type="name">Barracuda</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -227,9 +256,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bat_Ray.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Bat Ray</td>
+                  <td data-type="name">Bat Ray</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -241,9 +273,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Beluga Sturgeon</td>
+                  <td data-type="name">Beluga Sturgeon</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -255,9 +290,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Black Sea Bass</td>
+                  <td data-type="name">Black Sea Bass</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -266,9 +304,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Blobfish.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Blobfish</td>
+                  <td data-type="name">Blobfish</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -277,9 +318,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Blue_Marlin.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Blue Marlin</td>
+                  <td data-type="name">Blue Marlin</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -291,9 +335,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Blue Spotted Ray</td>
+                  <td data-type="name">Blue Spotted Ray</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Morning, Day, Evening</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -302,9 +349,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Bluefin_Tuna.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Bluefin Tuna</td>
+                  <td data-type="name">Bluefin Tuna</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -313,9 +363,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Cactus_Moray.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Cactus Moray</td>
+                  <td data-type="name">Cactus Moray</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Day, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -324,9 +377,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Calico_Koi.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Calico Koi</td>
+                  <td data-type="name">Calico Koi</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -338,9 +394,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Cantankerous Koi</td>
+                  <td data-type="name">Cantankerous Koi</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>Day, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -352,9 +411,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Channel Catfish</td>
+                  <td data-type="name">Channel Catfish</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -363,9 +425,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Chub.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Chub</td>
+                  <td data-type="name">Chub</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -374,9 +439,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Cloudfish.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Cloudfish</td>
+                  <td data-type="name">Cloudfish</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -388,9 +456,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Crimson Fangtooth</td>
+                  <td data-type="name">Crimson Fangtooth</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -399,9 +470,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Crucian_Carp.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Crucian Carp</td>
+                  <td data-type="name">Crucian Carp</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -413,9 +487,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Cutthroat Trout</td>
+                  <td data-type="name">Cutthroat Trout</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -424,9 +501,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Dawnray.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Dawnray</td>
+                  <td data-type="name">Dawnray</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>Morning</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -435,9 +515,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Duskray.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Duskray</td>
+                  <td data-type="name">Duskray</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>Evening</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -449,9 +532,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Enchanted Pupfish</td>
+                  <td data-type="name">Enchanted Pupfish</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -463,9 +549,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Energized Piranha</td>
+                  <td data-type="name">Energized Piranha</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -477,9 +566,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Eyeless Minnow</td>
+                  <td data-type="name">Eyeless Minnow</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -488,9 +580,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Fairy_Carp.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Fairy Carp</td>
+                  <td data-type="name">Fairy Carp</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Morning, Evening</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -502,9 +597,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Fathead Minnow</td>
+                  <td data-type="name">Fathead Minnow</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -516,9 +614,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Flametongue Ray</td>
+                  <td data-type="name">Flametongue Ray</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -530,9 +631,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Freshwater Eel</td>
+                  <td data-type="name">Freshwater Eel</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -544,9 +648,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Giant Goldfish</td>
+                  <td data-type="name">Giant Goldfish</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -558,9 +665,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Giant Kilima Stingray</td>
+                  <td data-type="name">Giant Kilima Stingray</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Morning, Day, Evening</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -569,9 +679,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Gillyfin.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Gillyfin</td>
+                  <td data-type="name">Gillyfin</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -583,9 +696,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Golden Salmon</td>
+                  <td data-type="name">Golden Salmon</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -594,9 +710,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Honey_Loach.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Honey Loach</td>
+                  <td data-type="name">Honey Loach</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Day, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -608,9 +727,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Hypnotic Moray</td>
+                  <td data-type="name">Hypnotic Moray</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -622,9 +744,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Indigo Lamprey</td>
+                  <td data-type="name">Indigo Lamprey</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -633,9 +758,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Kenli's_Carp.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Kenli's Carp</td>
+                  <td data-type="name">Kenli's Carp</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -647,9 +775,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Kilima Catfish</td>
+                  <td data-type="name">Kilima Catfish</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -661,9 +792,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Kilima Greyling</td>
+                  <td data-type="name">Kilima Greyling</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -675,9 +809,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Kilima Redfin</td>
+                  <td data-type="name">Kilima Redfin</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -689,9 +826,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Largemouth Bass</td>
+                  <td data-type="name">Largemouth Bass</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -703,9 +843,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Long Nosed Unicorn Fish</td>
+                  <td data-type="name">Long Nosed Unicorn Fish</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -717,9 +860,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Midnight Paddlefish</td>
+                  <td data-type="name">Midnight Paddlefish</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -728,9 +874,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Mirror_Carp.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Mirror Carp</td>
+                  <td data-type="name">Mirror Carp</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -739,9 +888,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Mottled_Gobi.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Mottled Gobi</td>
+                  <td data-type="name">Mottled Gobi</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -750,9 +902,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Mudminnow.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Mudminnow</td>
+                  <td data-type="name">Mudminnow</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -764,9 +919,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Mutated Angler</td>
+                  <td data-type="name">Mutated Angler</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -775,9 +933,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Oily_Anchovy.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Oily Anchovy</td>
+                  <td data-type="name">Oily Anchovy</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -789,9 +950,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Orange Bluegill</td>
+                  <td data-type="name">Orange Bluegill</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -800,9 +964,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Paddlefish.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Paddlefish</td>
+                  <td data-type="name">Paddlefish</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Morning, Day, Evening</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -814,9 +981,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Painted Perch</td>
+                  <td data-type="name">Painted Perch</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -828,9 +998,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Platinum Chad</td>
+                  <td data-type="name">Platinum Chad</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -839,9 +1012,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Prism_Trout.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Prism Trout</td>
+                  <td data-type="name">Prism Trout</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -853,9 +1029,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Radiant Sunfish</td>
+                  <td data-type="name">Radiant Sunfish</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -867,9 +1046,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Rainbow Trout</td>
+                  <td data-type="name">Rainbow Trout</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -881,9 +1063,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Red-bellied Piranha</td>
+                  <td data-type="name">Red-bellied Piranha</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -895,9 +1080,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Ribbontail Ray</td>
+                  <td data-type="name">Ribbontail Ray</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Morning, Evening</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -909,9 +1097,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Rosy Bitterling</td>
+                  <td data-type="name">Rosy Bitterling</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -920,9 +1111,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Sardine.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Sardine</td>
+                  <td data-type="name">Sardine</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -931,9 +1125,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Scarlet_Koi.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Scarlet Koi</td>
+                  <td data-type="name">Scarlet Koi</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="ponds">Ponds</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -942,9 +1139,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Shimmerfin.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Shimmerfin</td>
+                  <td data-type="name">Shimmerfin</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -956,9 +1156,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Silver Salmon</td>
+                  <td data-type="name">Silver Salmon</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -970,9 +1173,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Silvery Minnow</td>
+                  <td data-type="name">Silvery Minnow</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -984,9 +1190,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Smallmouth Bass</td>
+                  <td data-type="name">Smallmouth Bass</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -998,9 +1207,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Spotted Bullhead</td>
+                  <td data-type="name">Spotted Bullhead</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1012,9 +1224,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Stalking Catfish</td>
+                  <td data-type="name">Stalking Catfish</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1023,9 +1238,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Stickleback.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Stickleback</td>
+                  <td data-type="name">Stickleback</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1034,9 +1252,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Stonefish.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Stonefish</td>
+                  <td data-type="name">Stonefish</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1045,9 +1266,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Stormray.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Stormray</td>
+                  <td data-type="name">Stormray</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Morning, Evening</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1056,9 +1280,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Striped_Dace.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Striped Dace</td>
+                  <td data-type="name">Striped Dace</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="kilima-rivers">Kilima Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1070,9 +1297,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Striped Sturgeon</td>
+                  <td data-type="name">Striped Sturgeon</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-lake">Kilima Lake</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1081,9 +1311,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Swordfin_Eel.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Swordfin Eel</td>
+                  <td data-type="name">Swordfin Eel</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1095,9 +1328,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Thundering Eel</td>
+                  <td data-type="name">Thundering Eel</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="worm">Worm</td>
+                  <td data-bait="1-worm">Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1106,9 +1342,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Umbran_Carp.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Umbran Carp</td>
+                  <td data-type="name">Umbran Carp</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1117,9 +1356,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Void_Ray.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Void Ray</td>
+                  <td data-type="name">Void Ray</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="caves">Caves</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1131,9 +1373,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Willow Lamprey</td>
+                  <td data-type="name">Willow Lamprey</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1142,9 +1387,12 @@
                   <td class="fish-image d-none d-sm-block">
                     <img src="assets/img/Yellow_Perch.webp" class="fish-icon" />
                   </td>
-                  <td class="fish-name">Yellow Perch</td>
+                  <td data-type="name">Yellow Perch</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-rivers">Bahari Rivers</td>
-                  <td data-bait="none">None</td>
+                  <td data-bait="0-none">None</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>
@@ -1156,9 +1404,12 @@
                       class="fish-icon"
                     />
                   </td>
-                  <td class="fish-name">Yellowfin Tuna</td>
+                  <td data-type="name">Yellowfin Tuna</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-coast">Bahari Coast</td>
-                  <td data-bait="glow-worm">Glow Worm</td>
+                  <td data-bait="2-glow-worm">Glow Worm</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
                   <td><input type="checkbox" data-type="one-star" /></td>

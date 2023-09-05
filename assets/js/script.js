@@ -47,7 +47,8 @@ $(document).ready(function () {
     .on("change", function () {
       const valueLocation = $("select#location option:selected").attr("value"),
         valueBait = $("select#bait option:selected").attr("value"),
-        valueFilter = $("select#filter option:selected").attr("value");
+        valueFilter = $("select#filter option:selected").attr("value"),
+        valueRarity = $("select#rarity option:selected").attr("value");
       $("table > tbody > tr").each(function () {
         let show = true;
         if (valueBait)
@@ -57,6 +58,10 @@ $(document).ready(function () {
           show =
             show &&
             $(this).find("[data-location=" + valueLocation + "]").length > 0;
+        if (valueRarity)
+          show =
+            show &&
+            $(this).find("[data-rarity=" + valueRarity + "]").length > 0;
         if (valueFilter) {
           if (valueFilter != "any")
             show =
@@ -176,16 +181,19 @@ function TableComparer(index) {
 }
 
 /**
- *
+ * Return comparable element depending of the column
  * @param {*} row
  * @param {*} index
  * @returns
  */
 function TableCellValue(row, index) {
-  if (!$(row).children("td").eq(index).text()) {
-    return $(row).children("td").eq(index).children("input")[0].checked == true
-      ? "0"
-      : "1";
+  let td = $(row).children("td").eq(index),
+    dataSort = td.attr("data-bait") || td.attr("data-rarity");
+  if (!td.text()) {
+    return td.children("input")[0].checked == true ? "0" : "1";
+  } else if (dataSort) {
+    return dataSort;
+  } else {
+    return td.text();
   }
-  return $(row).children("td").eq(index).text();
 }

@@ -108,6 +108,13 @@
           <article>
             <div id="filters" class="d-flex flex-column flex-md-row">
               <input id="search" type="text" placeholder="Name" />
+              <select id="rarity">
+                <option value="">All Rarity</option>
+                <option value="0-common">Common</option>
+                <option value="1-uncommon">Uncommon</option>
+                <option value="2-rare">Rare</option>
+                <option value="3-epic">Epic</option>
+              </select>
               <select id="location">
                 <option value="">All Locations</option>
                 <option value="bahari-bay">Bahari Bay</option>
@@ -126,6 +133,7 @@
                 <tr>
                   <th class="no-sort d-none d-sm-block no-border"></th>
                   <th class="sort-asc">Name</th>
+                  <th>Rarity</th>
                   <th>Location</th>
                   <th>Time</th>
                   <th></th>
@@ -141,6 +149,9 @@
                     />
                   </td>
                   <td class="fish-name">Ancient Amber Beetle</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -154,6 +165,9 @@
                     />
                   </td>
                   <td class="fish-name">Azure Stonehopper</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -164,6 +178,9 @@
                     <img src="assets/img/Bahari_Bee.webp" class="bug-icon" />
                   </td>
                   <td class="fish-name">Bahari Bee</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -174,6 +191,9 @@
                     <img src="assets/img/Bahari_Crab.webp" class="bug-icon" />
                   </td>
                   <td class="fish-name">Bahari Crab</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -187,6 +207,9 @@
                     />
                   </td>
                   <td class="fish-name">Bahari Glowbug</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -200,6 +223,9 @@
                     />
                   </td>
                   <td class="fish-name">Brighteye Butterfly</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -213,6 +239,9 @@
                     />
                   </td>
                   <td class="fish-name">Brushtail Dragonfly</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="both">Bahari Bay, Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -226,6 +255,9 @@
                     />
                   </td>
                   <td class="fish-name">Cerulean Cicada</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -239,6 +271,9 @@
                     />
                   </td>
                   <td class="fish-name">Common Bark Cicada</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -252,6 +287,9 @@
                     />
                   </td>
                   <td class="fish-name">Common Blue Butterfly</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="both">Bahari Bay, Kilima Valley</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -265,6 +303,9 @@
                     />
                   </td>
                   <td class="fish-name">Common Field Cricket</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="both">Bahari Bay, Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -278,6 +319,9 @@
                     />
                   </td>
                   <td class="fish-name">Duskwing Butterfly</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -288,6 +332,9 @@
                     <img src="assets/img/Fairy_Mantis.webp" class="bug-icon" />
                   </td>
                   <td class="fish-name">Fairy_Mantis</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -301,6 +348,9 @@
                     />
                   </td>
                   <td class="fish-name">Firebreathing Dragonfly</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -314,6 +364,9 @@
                     />
                   </td>
                   <td class="fish-name">Garden Ladybug</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -327,6 +380,9 @@
                     />
                   </td>
                   <td class="fish-name">Garden Leafhopper</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -337,6 +393,9 @@
                     <img src="assets/img/Garden_Mantis.webp" class="bug-icon" />
                   </td>
                   <td class="fish-name">Garden Mantis</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -350,6 +409,9 @@
                     />
                   </td>
                   <td class="fish-name">Garden Millipede</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -360,6 +422,9 @@
                     <img src="assets/img/Garden_Snail.webp" class="bug-icon" />
                   </td>
                   <td class="fish-name">Garden Snail</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -373,6 +438,9 @@
                     />
                   </td>
                   <td class="fish-name">Golden Glory Bee</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -386,6 +454,9 @@
                     />
                   </td>
                   <td class="fish-name">Gossamer Veil Moth</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -399,6 +470,9 @@
                     />
                   </td>
                   <td class="fish-name">Hairy Millipede</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -412,6 +486,9 @@
                     />
                   </td>
                   <td class="fish-name">Inky Dragonfly</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -425,6 +502,9 @@
                     />
                   </td>
                   <td class="fish-name">Jewelwing Dragonfly</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -438,6 +518,9 @@
                     />
                   </td>
                   <td class="fish-name">Kilima Night Moth</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="both">Bahari Bay, Kilima Valley</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -451,6 +534,9 @@
                     />
                   </td>
                   <td class="fish-name">Leafstalker Mantis</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -464,6 +550,9 @@
                     />
                   </td>
                   <td class="fish-name">Lunar Fairy Moth</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -477,6 +566,9 @@
                     />
                   </td>
                   <td class="fish-name">Paper Lantern Bug</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -490,6 +582,9 @@
                     />
                   </td>
                   <td class="fish-name">Princess Ladybug</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -503,6 +598,9 @@
                     />
                   </td>
                   <td class="fish-name">Proudhorned Stag Beetle</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -516,6 +614,9 @@
                     />
                   </td>
                   <td class="fish-name">Rainbow-Tipped Butterfly</td>
+                  <td data-rarity="3-epic">
+                    <span class="rarity epic">Epic</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -529,6 +630,9 @@
                     />
                   </td>
                   <td class="fish-name">Raspberry Beetle</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -542,6 +646,9 @@
                     />
                   </td>
                   <td class="fish-name">Scintillating Centipede</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -555,6 +662,9 @@
                     />
                   </td>
                   <td class="fish-name">Spineshell Crab</td>
+                  <td data-rarity="1-uncommon">
+                    <span class="rarity uncommon">Uncommon</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -568,6 +678,9 @@
                     />
                   </td>
                   <td class="fish-name">Spitfire Cicada</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Morning, Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -581,6 +694,9 @@
                     />
                   </td>
                   <td class="fish-name">Spotted Mantis</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="kilima-valley">Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -594,6 +710,9 @@
                     />
                   </td>
                   <td class="fish-name">Spotted Stinkbug</td>
+                  <td data-rarity="0-common">
+                    <span class="rarity common">Common</span>
+                  </td>
                   <td data-location="both">Bahari Bay, Kilima Valley</td>
                   <td>All Day</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -607,6 +726,9 @@
                     />
                   </td>
                   <td class="fish-name">Stripeshell Snail</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
@@ -617,6 +739,9 @@
                     <img src="assets/img/Vampire_Crab.webp" class="bug-icon" />
                   </td>
                   <td class="fish-name">Vampire Crabl</td>
+                  <td data-rarity="2-rare">
+                    <span class="rarity rare">Rare</span>
+                  </td>
                   <td data-location="bahari-bay">Bahari Bay</td>
                   <td>Evening, Night</td>
                   <td><input type="checkbox" data-type="normal" /></td>
