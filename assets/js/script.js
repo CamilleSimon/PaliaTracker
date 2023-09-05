@@ -182,5 +182,10 @@ function TableComparer(index) {
  * @returns
  */
 function TableCellValue(row, index) {
+  if (!$(row).children("td").eq(index).text()) {
+    return $(row).children("td").eq(index).children("input")[0].checked == true
+      ? "0"
+      : "1";
+  }
   return $(row).children("td").eq(index).text();
 }
