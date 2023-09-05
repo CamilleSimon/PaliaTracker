@@ -44,9 +44,9 @@
       gtag("config", "G-ZQ2J16KNKN");
     </script>
   </head>
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column">
     <!--Header-->
-    <nav class="navbar color-2dp navbar-dark sticky-top shadow p-2">
+    <nav class="navbar color-2dp navbar-dark fixed-top shadow p-2">
       <button
         class="navbar-toggler d-md-none"
         type="button"
@@ -58,7 +58,7 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a href="/" class="navbar-brand mb-0 h1 p-0">
+      <a href="index.html" class="navbar-brand mb-0 h1 p-0">
         <div class="d-flex align-items-center">
           <img src="assets/logo.svg" class="logo d-inline-block" />
           <span>Palia Tracker</span>
@@ -79,15 +79,38 @@
               ><img src="assets/bug-solid.svg" class="cat-icon" /> Bugs</a
             >
           </li>
+          <hr />
+          <li class="nav-item">
+            <a class="nav-link disabled" href="https://palianpc.com/"
+              >Outside Ressources</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://palianpc.com/"
+              ><img src="assets/heart-solid.svg" class="cat-icon" /> Palia
+              NPC</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://paliamaps.com/"
+              ><img src="assets/map-solid.svg" class="cat-icon" /> Interactive
+              Maps</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://palia-garden-planner.vercel.app/"
+              ><img src="assets/seedling-solid.svg" class="cat-icon" /> Garden
+              Planner</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
-    <div class="d-flex h-100">
+    <!--Main-->
+    <main class="d-inline-flex mt-5 align-items-stretch h-100">
       <!--Sidebar-->
-      <aside
-        class="d-inline-flex flex-column collapse color-1dp sidebar d-md-block d-none"
-      >
-        <div class="sidebar-sticky">
+      <aside class="collapse color-1dp sidebar d-md-block d-none">
+        <div class="sidebar-sticky container mt-2">
           <ul class="nav flex-column ml-2">
             <li class="nav-item d-flex flex-row align-items-center">
               <a class="nav-link" href="fish.html"
@@ -99,54 +122,73 @@
                 ><img src="assets/bug-solid.svg" class="cat-icon" /> Bugs</a
               >
             </li>
+            <hr />
+            <li class="nav-item">
+              <a class="nav-link disabled" href="https://palianpc.com/"
+                >Outside Ressources</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://palianpc.com/"
+                ><img src="assets/heart-solid.svg" class="cat-icon" /> Palia
+                NPC</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://paliamaps.com/"
+                ><img src="assets/map-solid.svg" class="cat-icon" /> Interactive
+                Maps</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://palia-garden-planner.vercel.app/"
+                ><img src="assets/seedling-solid.svg" class="cat-icon" /> Garden
+                Planner</a
+              >
+            </li>
           </ul>
         </div>
       </aside>
-      <!--Main-->
-      <main class="container mx-auto">
-        <div class="d-flex flex-column justify-content-between h-100">
-          <article class="m-2 p-2">
-            <h1 class="border-bottom py-4 d-flex align-items-center">
-              <img
-                class="logo-big d-inline-block"
-                src="assets/logo.svg"
-              /><span> Palia Tracker</span>
-            </h1>
-            <h3 class="pt-2">Welcome to Palia Tracker!</h3>
-            <p>
-              Here you can track your progression on your fishing and bug
-              catching collections.
-            </p>
-            <p>More features available soon.</p>
-            <p>
-              To report any bug or suggest new features, you can join the
-              Discord:
-              <a
-                class="icon"
-                href="https://discord.gg/SyTvddYQ6W"
-                target="_blank"
-                ><i class="bi bi-discord"></i
-              ></a>
-            </p>
-          </article>
-          <!--Footer-->
-          <footer
-            class="flex-row d-flex justify-content-center align-items-baseline"
-          >
-            <p class="fs-6 mb-0">Created by Shaykan Tel'maris |</p>
+      <div class="aside d-none d-sm-block"></div>
+      <div class="d-flex flex-column justify-content-between container">
+        <article class="m-2 p-2">
+          <h1 class="border-bottom py-4 d-flex align-items-center">
+            <img class="logo-big d-inline-block" src="assets/logo.svg" /><span>
+              Palia Tracker</span
+            >
+          </h1>
+          <h3 class="pt-2">Welcome to Palia Tracker!</h3>
+          <p>
+            Here you can track your progression on your fishing and bug catching
+            collections.
+          </p>
+          <p>More features available soon.</p>
+          <p>
+            To report any bug or suggest new features, you can join the Discord:
             <a class="icon" href="https://discord.gg/SyTvddYQ6W" target="_blank"
               ><i class="bi bi-discord"></i
             ></a>
-            <a
-              class="icon"
-              href="https://github.com/CamilleSimon/PaliaTracker"
-              target="_blank"
-              ><i class="bi bi-github"></i
-            ></a>
-          </footer>
-        </div>
-      </main>
-    </div>
+          </p>
+        </article>
+        <!--Footer-->
+        <footer
+          class="flex-row d-flex justify-content-center align-items-baseline"
+        >
+          <p class="fs-6 mb-0">Created by Shaykan Tel'maris |</p>
+          <a class="icon" href="https://discord.gg/SyTvddYQ6W" target="_blank"
+            ><i class="bi bi-discord"></i
+          ></a>
+          <a
+            class="icon"
+            href="https://github.com/CamilleSimon/PaliaTracker"
+            target="_blank"
+            ><i class="bi bi-github"></i
+          ></a>
+        </footer>
+      </div>
+    </main>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

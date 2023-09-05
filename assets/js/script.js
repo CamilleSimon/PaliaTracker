@@ -172,8 +172,9 @@ function init() {
    * Hide columns
    */
   //mobile
-  console.log($(window).width());
+  console.log($(window).width() < 768);
   if ($(window).width() < 768) {
+    console.log("yes");
     hideColumnClass("fish-image");
     hideColumnClass("bug-image");
     hideColumnClass("show-rarity");
@@ -185,17 +186,16 @@ function init() {
  * @param {*} name
  */
 function hideColumnClass(name) {
-  if (name)
-    $("." + name).each(function () {
-      $(this).toggle();
-    });
+  if (name) {
+    $("." + name).toggle();
+  }
 }
 
 /**
  * Show specific column
  * @param {*} name
  */
-function hideColumnClass(name) {
+function showColumnClass(name) {
   if (name)
     $("." + name).each(function () {
       $(this).show();

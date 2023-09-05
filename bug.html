@@ -46,6 +46,7 @@
   </head>
   <body class="d-flex flex-column">
     <!--Header-->
+    <!--Header-->
     <nav class="navbar color-2dp navbar-dark fixed-top shadow p-2">
       <button
         class="navbar-toggler d-md-none"
@@ -79,14 +80,38 @@
               ><img src="assets/bug-solid.svg" class="cat-icon" /> Bugs</a
             >
           </li>
+          <hr />
+          <li class="nav-item">
+            <a class="nav-link disabled" href="https://palianpc.com/"
+              >Outside Ressources</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://palianpc.com/"
+              ><img src="assets/heart-solid.svg" class="cat-icon" /> Palia
+              NPC</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://paliamaps.com/"
+              ><img src="assets/map-solid.svg" class="cat-icon" /> Interactive
+              Maps</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://palia-garden-planner.vercel.app/"
+              ><img src="assets/seedling-solid.svg" class="cat-icon" /> Garden
+              Planner</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
+    <!--Main-->
     <main class="d-inline-flex mt-5 align-items-stretch h-100">
-      <aside
-        class="d-inline-flex flex-column collapse color-1dp sidebar d-md-block d-none"
-      >
-        <div class="sidebar-sticky">
+      <!--Sidebar-->
+      <aside class="collapse color-1dp sidebar d-md-block d-none">
+        <div class="sidebar-sticky container mt-2">
           <ul class="nav flex-column ml-2">
             <li class="nav-item d-flex flex-row align-items-center">
               <a class="nav-link" href="fish.html"
@@ -96,6 +121,32 @@
             <li class="nav-item">
               <a class="nav-link" href="bug.html"
                 ><img src="assets/bug-solid.svg" class="cat-icon" /> Bugs</a
+              >
+            </li>
+            <hr />
+            <li class="nav-item">
+              <a class="nav-link disabled" href="https://palianpc.com/"
+                >Outside Ressources</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://palianpc.com/"
+                ><img src="assets/heart-solid.svg" class="cat-icon" /> Palia
+                NPC</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://paliamaps.com/"
+                ><img src="assets/map-solid.svg" class="cat-icon" /> Interactive
+                Maps</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://palia-garden-planner.vercel.app/"
+                ><img src="assets/seedling-solid.svg" class="cat-icon" /> Garden
+                Planner</a
               >
             </li>
           </ul>
@@ -129,9 +180,9 @@
           <table class="table table-dark align-middle" id="fish-table">
             <thead>
               <tr>
-                <th class="no-sort d-none d-sm-block no-border"></th>
+                <th class="no-sort bug-image"></th>
                 <th class="sort-asc">Name</th>
-                <th>Rarity</th>
+                <th class="show-rarity">Rarity</th>
                 <th>Location</th>
                 <th>Time</th>
                 <th></th>
@@ -140,7 +191,7 @@
             </thead>
             <tbody class="table-group-divider">
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Ancient_Amber_Beetle.webp"
                     class="bug-icon"
@@ -160,7 +211,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Azure_Stonehopper.png"
                     class="bug-icon"
@@ -180,7 +231,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Bahari_Bee.webp" class="bug-icon" />
                 </td>
                 <td class="name">Bahari Bee</td>
@@ -197,7 +248,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Bahari_Crab.webp" class="bug-icon" />
                 </td>
                 <td class="name">Bahari Crab</td>
@@ -214,7 +265,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Bahari_Glowbug.webp" class="bug-icon" />
                 </td>
                 <td class="name">Bahari Glowbug</td>
@@ -231,7 +282,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Brighteye_Butterfly.webp"
                     class="bug-icon"
@@ -251,7 +302,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Brushtail_Dragonfly.webp"
                     class="bug-icon"
@@ -271,7 +322,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Cerulean_Cicada.webp" class="bug-icon" />
                 </td>
                 <td class="name">Cerulean Cicada</td>
@@ -288,7 +339,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Common_Bark_Cicada.webp"
                     class="bug-icon"
@@ -308,7 +359,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Common_Blue_Butterfly.webp"
                     class="bug-icon"
@@ -328,7 +379,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Common_Field_Cricket.webp"
                     class="bug-icon"
@@ -348,7 +399,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Duskwing_Butterfly.webp"
                     class="bug-icon"
@@ -368,7 +419,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Fairy_Mantis.webp" class="bug-icon" />
                 </td>
                 <td class="name">Fairy_Mantis</td>
@@ -385,7 +436,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Firebreathing_Dragonfly.webp"
                     class="bug-icon"
@@ -405,7 +456,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Garden_Ladybug.webp" class="bug-icon" />
                 </td>
                 <td class="name">Garden Ladybug</td>
@@ -422,7 +473,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Garden_Leafhopper.webp"
                     class="bug-icon"
@@ -442,7 +493,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Garden_Mantis.webp" class="bug-icon" />
                 </td>
                 <td class="name">Garden Mantis</td>
@@ -459,7 +510,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Garden_Millipede.webp"
                     class="bug-icon"
@@ -479,7 +530,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Garden_Snail.webp" class="bug-icon" />
                 </td>
                 <td class="name">Garden Snail</td>
@@ -496,7 +547,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Golden_Glory_Bee.webp"
                     class="bug-icon"
@@ -516,7 +567,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Gossamer_Veil_Moth.webp"
                     class="bug-icon"
@@ -536,7 +587,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Hairy_Millipede.webp" class="bug-icon" />
                 </td>
                 <td class="name">Hairy Millipede</td>
@@ -553,7 +604,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Inky_Dragonfly.webp" class="bug-icon" />
                 </td>
                 <td class="name">Inky Dragonfly</td>
@@ -570,7 +621,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Jewelwing_Dragonfly.webp"
                     class="bug-icon"
@@ -590,7 +641,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Kilima_Night_Moth.webp"
                     class="bug-icon"
@@ -610,7 +661,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Leafstalker_Mantis.png"
                     class="bug-icon"
@@ -630,7 +681,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Lunar_Fairy_Moth.webp"
                     class="bug-icon"
@@ -650,7 +701,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Paper_Lantern_Bug.webp"
                     class="bug-icon"
@@ -670,7 +721,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Princess_Ladybug.webp"
                     class="bug-icon"
@@ -690,7 +741,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Proudhorned_Stag_Beetle.webp"
                     class="bug-icon"
@@ -710,7 +761,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Rainbow-Tipped_Butterfly.webp"
                     class="bug-icon"
@@ -730,7 +781,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Raspberry_Beetle.webp"
                     class="bug-icon"
@@ -750,7 +801,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Scintillating_Centipede.webp"
                     class="bug-icon"
@@ -770,7 +821,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Spineshell_Crab.webp" class="bug-icon" />
                 </td>
                 <td class="name">Spineshell Crab</td>
@@ -787,7 +838,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Spitfire_Cicada.webp" class="bug-icon" />
                 </td>
                 <td class="name">Spitfire Cicada</td>
@@ -804,7 +855,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Spotted_Mantis.webp" class="bug-icon" />
                 </td>
                 <td class="name">Spotted Mantis</td>
@@ -821,7 +872,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Spotted_Stinkbug.webp"
                     class="bug-icon"
@@ -841,7 +892,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img
                     src="assets/img/Stripeshell_Snails.webp"
                     class="bug-icon"
@@ -861,7 +912,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image d-none d-sm-block">
+                <td class="bug-image">
                   <img src="assets/img/Vampire_Crab.webp" class="bug-icon" />
                 </td>
                 <td class="name">Vampire Crab</td>
