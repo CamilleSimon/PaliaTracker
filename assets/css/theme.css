@@ -84,7 +84,7 @@ table thead tr th.sort-desc:after {
 }
 
 .aside {
-  width: 200px;
+  flex: 0 0 200px;
 }
 
 .footer-sticky {
