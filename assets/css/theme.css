@@ -102,3 +102,7 @@ table thead tr th.sort-desc:after {
 .no-border {
   border: unset;
 }
+
+th {
+  cursor: pointer;
+}
