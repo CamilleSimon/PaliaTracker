@@ -28,6 +28,10 @@ table thead tr th.sort-desc:after {
   height: 44px;
 }
 
+.spawn-icon {
+  height: 20px;
+}
+
 .fish-image,
 .bug-image {
   text-align: center;

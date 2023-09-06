@@ -82,6 +82,7 @@ function listVisibilityUpdate() {
     valueFilter = $("select#filter option:selected").attr("value"),
     valueRarity = $("select#rarity option:selected").attr("value");
   valueName = $("#search").val().toLowerCase();
+
   $("table > tbody > tr").each(function () {
     let show = true;
     if (valueName)
@@ -186,13 +187,6 @@ function init() {
       $(this).attr("title", $(this).attr("title-tooltip"));
     });
 
-    let tooltipTriggerList = [].slice.call(
-        document.querySelectorAll('[data-bs-toggle="tooltip"]')
-      ),
-      tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-      });
-
     $(document).on("mouseover", ".tooltip", function () {
       var tooltipTrigger = $('a[aria-describedby="' + $(this).attr("id") + '"');
       if (!$(tooltipTrigger).hasClass("active")) {
@@ -200,6 +194,13 @@ function init() {
       }
     });
   }
+
+  let tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    ),
+    tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
 }
 
 /**
