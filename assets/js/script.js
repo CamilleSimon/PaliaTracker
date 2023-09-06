@@ -173,9 +173,29 @@ function init() {
    */
   //mobile
   if ($(window).width() < 768) {
-    hideColumnClass("fish-image");
-    hideColumnClass("bug-image");
     hideColumnClass("show-rarity");
+    hideColumnClass("bait");
+    hideColumnClass("location");
+    hideColumnClass("time");
+
+    $("[title-tooltip]").each(function () {
+      console.log($(this));
+      $(this).attr("title", $(this).attr("title-tooltip"));
+    });
+
+    let tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      ),
+      tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+    $(document).on("mouseover", ".tooltip", function () {
+      var tooltipTrigger = $('a[aria-describedby="' + $(this).attr("id") + '"');
+      if (!$(tooltipTrigger).hasClass("active")) {
+        $(tooltipTrigger).tooltip("show").addClass("active");
+      }
+    });
   }
 }
 
