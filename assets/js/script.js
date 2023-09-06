@@ -180,6 +180,7 @@ function init() {
   if ($(window).width() < 768) {
     hideColumnClass("show-rarity");
     hideColumnClass("bait");
+    hideColumnClass("bait-icon");
     hideColumnClass("location");
     hideColumnClass("time");
 

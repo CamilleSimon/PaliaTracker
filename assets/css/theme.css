@@ -20,11 +20,9 @@ table thead tr th.sort-desc:after {
   content: "\25be";
 }
 
-.fish-icon {
-  height: 44px;
-}
-
-.bug-icon {
+.fish-icon,
+.bug-icon,
+.bait-icon {
   height: 44px;
 }
 
