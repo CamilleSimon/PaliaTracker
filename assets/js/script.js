@@ -51,7 +51,10 @@ $(document).ready(function () {
     /** Save checkbox status */
     const dataType = $(this).attr("data-type"),
       isStarFish = !(dataType == "one-star") ? false : true,
-      fishName = $(this).parent().parent().children()[1].innerHTML;
+      fishName = $(this)
+        .parent()
+        .parent()
+        .find("[data-bs-toggle='tooltip']")[0].innerHTML;
     if ($(this).is(":checked")) {
       saveFish(fishName, isStarFish);
     } else {
@@ -59,15 +62,12 @@ $(document).ready(function () {
     }
     /** Check if row needs to be hidden */
     const valueFilter = $("select#filter option:selected").attr("value");
-    console.log("filterValue: " + valueFilter + ", dataType: " + dataType);
     if (valueFilter == dataType) {
       $(this).parent().parent().toggle();
     } else if (valueFilter == "any") {
       const tr = $(this).parent().parent(),
         normalCheckbox = tr.find("[data-type=normal]")[0].checked,
         oneStarCheckbox = tr.find("[data-type=one-star]")[0].checked;
-      console.log("normal: " + normalCheckbox + ", star: " + oneStarCheckbox);
-      console.log(tr);
       tr.toggle(!(normalCheckbox && oneStarCheckbox));
     }
   });
@@ -87,7 +87,11 @@ function listVisibilityUpdate() {
     if (valueName)
       show =
         show &&
-        $(this).children(".name").text().toLowerCase().indexOf(valueName) == 0;
+        $(this)
+          .find("[data-bs-toggle='tooltip']")
+          .text()
+          .toLowerCase()
+          .indexOf(valueName) == 0;
     if (valueBait)
       show = show && $(this).find("[data-bait=" + valueBait + "]").length > 0;
     if (valueLocation)
@@ -157,7 +161,7 @@ function init() {
    * Restore checkboxes with the stored status
    */
   $("table > tbody > tr").each(function () {
-    let name = $(this).children()[1].innerHTML,
+    let name = $(this).find("[data-bs-toggle='tooltip']")[0].innerHTML,
       stored = JSON.parse(localStorage.getItem(name));
     if (stored) {
       if (stored[0] == true) {
@@ -173,9 +177,28 @@ function init() {
    */
   //mobile
   if ($(window).width() < 768) {
-    hideColumnClass("fish-image");
-    hideColumnClass("bug-image");
     hideColumnClass("show-rarity");
+    hideColumnClass("bait");
+    hideColumnClass("location");
+    hideColumnClass("time");
+
+    $("[title-tooltip]").each(function () {
+      $(this).attr("title", $(this).attr("title-tooltip"));
+    });
+
+    let tooltipTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      ),
+      tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+
+    $(document).on("mouseover", ".tooltip", function () {
+      var tooltipTrigger = $('a[aria-describedby="' + $(this).attr("id") + '"');
+      if (!$(tooltipTrigger).hasClass("active")) {
+        $(tooltipTrigger).tooltip("show").addClass("active");
+      }
+    });
   }
 }
 

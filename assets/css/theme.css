@@ -155,8 +155,44 @@ tr {
   height: 62px;
 }
 
+.name a {
+  color: white;
+  text-decoration: none;
+}
+
+.custom-tooltip.tooltip > .tooltip-inner {
+  background-color: #424649;
+  text-align: left;
+  color: white;
+  box-shadow: 0 0 5px #121417;
+}
+
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before,
+.bs-tooltip-top .tooltip-arrow::before {
+  border-color: #424649 transparent transparent;
+}
+
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before,
+.bs-tooltip-right .tooltip-arrow::before {
+  border-color: transparent #424649 transparent transparent;
+}
+
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before,
+.bs-tooltip-bottom .tooltip-arrow::before {
+  border-color: transparent transparent #424649;
+}
+
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before,
+.bs-tooltip-left .tooltip-arrow::before {
+  border-color: transparent transparent transparent #424649;
+}
+
+.custom-tooltip.tooltip.show {
+  opacity: 1;
+}
+
 @media (min-width: 576px) {
-  html {
-    /*font-size: medium;*/
+  .name a {
+    cursor: unset;
   }
 }

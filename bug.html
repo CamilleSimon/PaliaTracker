@@ -46,7 +46,6 @@
   </head>
   <body class="d-flex flex-column">
     <!--Header-->
-    <!--Header-->
     <nav class="navbar color-2dp navbar-dark fixed-top shadow p-2">
       <button
         class="navbar-toggler d-md-none"
@@ -86,7 +85,7 @@
               class="nav-link disabled"
               href="https://palianpc.com/"
               target="_blank"
-              >Outside Ressources</a
+              >Outside Resources</a
             >
           </li>
           <li class="nav-item">
@@ -135,7 +134,7 @@
                 class="nav-link disabled"
                 href="https://palianpc.com/"
                 target="_blank"
-                >Outside Ressources</a
+                >Outside Resources</a
               >
             </li>
             <li class="nav-item">
@@ -191,10 +190,10 @@
             <thead>
               <tr>
                 <th class="no-sort bug-image"></th>
-                <th class="sort-asc">Name</th>
+                <th class="sort-asc name">Name</th>
                 <th class="show-rarity">Rarity</th>
-                <th>Location</th>
-                <th>Time</th>
+                <th class="location">Location</th>
+                <th class="time">Time</th>
                 <th></th>
                 <th><i class="bi bi-star-fill"></i></th>
               </tr>
@@ -207,12 +206,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Ancient Amber Beetle</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity epic'>Epic</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Ancient Amber Beetle</a
+                  >
+                </td>
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -227,12 +237,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Azure Stonehopper</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Azure Stonehopper</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -244,12 +265,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Bahari_Bee.webp" class="bug-icon" />
                 </td>
-                <td class="name">Bahari Bee</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Bahari Bee</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -261,12 +293,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Bahari_Crab.webp" class="bug-icon" />
                 </td>
-                <td class="name">Bahari Crab</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Bahari Crab</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -278,12 +321,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Bahari_Glowbug.webp" class="bug-icon" />
                 </td>
-                <td class="name">Bahari Glowbug</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Bahari Glowbug</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="evening night">Evening, Night</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -298,12 +352,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Brighteye Butterfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Morning, Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Brighteye Butterfly</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -318,12 +383,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Brushtail Dragonfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay, Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Brushtail Dragonfly</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="both">Bahari Bay, Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="both">
+                  Bahari Bay, Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -335,12 +413,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Cerulean_Cicada.webp" class="bug-icon" />
                 </td>
-                <td class="name">Cerulean Cicada</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Morning, Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Cerulean Cicada</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -355,12 +444,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Common Bark Cicada</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Morning, Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Common Bark Cicada</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -375,12 +475,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Common Blue Butterfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay, Kilima Valley</li><li>Time: Morning, Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Common Blue Butterfly</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="both">Bahari Bay, Kilima Valley</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="both">
+                  Bahari Bay, Kilima Valley
+                </td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -395,12 +508,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Common Field Cricket</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay, Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Common Field Cricket</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="both">Bahari Bay, Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="both">
+                  Bahari Bay, Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -415,12 +541,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Duskwing Butterfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: Morning, Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Duskwing Butterfly</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -432,12 +571,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Fairy_Mantis.webp" class="bug-icon" />
                 </td>
-                <td class="name">Fairy_Mantis</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity epic'>Epic</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Fairy_Mantis</a
+                  >
+                </td>
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -452,12 +602,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Firebreathing Dragonfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Firebreathing Dragonfly</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -469,12 +632,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Garden_Ladybug.webp" class="bug-icon" />
                 </td>
-                <td class="name">Garden Ladybug</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Garden Ladybug</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -489,12 +663,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Garden Leafhopper</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Garden Leafhopper</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -506,12 +693,25 @@
                 <td class="bug-image">
                   <img src="assets/img/Garden_Mantis.webp" class="bug-icon" />
                 </td>
-                <td class="name">Garden Mantis</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Garden Mantis</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -526,12 +726,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Garden Millipede</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Garden Millipede</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -543,12 +756,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Garden_Snail.webp" class="bug-icon" />
                 </td>
-                <td class="name">Garden Snail</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Garden Snail</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -563,12 +787,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Golden Glory Bee</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: Morning, Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Golden Glory Bee</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -583,12 +820,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Gossamer Veil Moth</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Gossamer Veil Moth</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="evening night">Evening, Night</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -600,12 +850,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Hairy_Millipede.webp" class="bug-icon" />
                 </td>
-                <td class="name">Hairy Millipede</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Hairy Millipede</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -617,12 +878,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Inky_Dragonfly.webp" class="bug-icon" />
                 </td>
-                <td class="name">Inky Dragonfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Inky Dragonfly</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -637,12 +909,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Jewelwing Dragonfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity epic'>Epic</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Jewelwing Dragonfly</a
+                  >
+                </td>
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -657,12 +940,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Kilima Night Moth</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay, Kilima Valley</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Kilima Night Moth</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="both">Bahari Bay, Kilima Valley</td>
-                <td data-time="evening night">Evening, Night</td>
+                <td class="location" data-location="both">
+                  Bahari Bay, Kilima Valley
+                </td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -677,12 +973,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Leafstalker Mantis</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Leafstalker Mantis</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -697,12 +1004,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Lunar Fairy Moth</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Lunar Fairy Moth</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="evening night">Evening, Night</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -717,12 +1035,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Paper Lantern Bug</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Paper Lantern Bug</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="evening night">Evening, Night</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -737,12 +1066,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Princess Ladybug</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Princess Ladybug</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -757,12 +1099,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Proudhorned Stag Beetle</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Proudhorned Stag Beetle</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -777,12 +1132,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Rainbow-Tipped Butterfly</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity epic'>Epic</span></li>
+                    <li>Location: Morning, Day</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Rainbow-Tipped Butterfly</a
+                  >
+                </td>
                 <td data-rarity="3-epic" class="show-rarity">
                   <span class="rarity epic">Epic</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -797,12 +1163,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Raspberry Beetle</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Raspberry Beetle</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -817,12 +1196,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Scintillating Centipede</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Scintillating Centipede</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -834,12 +1224,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Spineshell_Crab.webp" class="bug-icon" />
                 </td>
-                <td class="name">Spineshell Crab</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Spineshell Crab</a
+                  >
+                </td>
                 <td data-rarity="1-uncommon" class="show-rarity">
                   <span class="rarity uncommon">Uncommon</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -851,12 +1252,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Spitfire_Cicada.webp" class="bug-icon" />
                 </td>
-                <td class="name">Spitfire Cicada</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Morning, Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Spitfire Cicada</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="morning day">Morning, Day</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="morning day">Morning, Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -868,12 +1280,25 @@
                 <td class="bug-image">
                   <img src="assets/img/Spotted_Mantis.webp" class="bug-icon" />
                 </td>
-                <td class="name">Spotted Mantis</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Spotted Mantis</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="kilima-valley">Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -888,12 +1313,25 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Spotted Stinkbug</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay, Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Spotted Stinkbug</a
+                  >
+                </td>
                 <td data-rarity="0-common" class="show-rarity">
                   <span class="rarity common">Common</span>
                 </td>
-                <td data-location="both">Bahari Bay, Kilima Valley</td>
-                <td data-time="all">All Day</td>
+                <td class="location" data-location="both">
+                  Bahari Bay, Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -908,12 +1346,23 @@
                     class="bug-icon"
                   />
                 </td>
-                <td class="name">Stripeshell Snail</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Stripeshell Snail</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="evening night">Evening, Night</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
@@ -925,12 +1374,23 @@
                 <td class="bug-image">
                   <img src="assets/img/Vampire_Crab.webp" class="bug-icon" />
                 </td>
-                <td class="name">Vampire Crab</td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Vampire Crab</a
+                  >
+                </td>
                 <td data-rarity="2-rare" class="show-rarity">
                   <span class="rarity rare">Rare</span>
                 </td>
-                <td data-location="bahari-bay">Bahari Bay</td>
-                <td data-time="evening night">Evening, Night</td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
                 <td class="normal">
                   <input type="checkbox" data-type="normal" />
                 </td>
