@@ -26,12 +26,14 @@ table thead tr th.sort-desc:after {
   height: 44px;
 }
 
+.none,
 .spawn-icon {
   height: 20px;
 }
 
 .fish-image,
-.bug-image {
+.bug-image,
+.bait {
   text-align: center;
 }
 
@@ -151,6 +153,16 @@ th {
 
 .uncommon {
   background-color: #477c3a !important;
+}
+
+.glow-worm {
+  background-color: #cebe18;
+  color: black;
+}
+
+.worm {
+  background-color: #e7ad7b;
+  color: black;
 }
 
 tr {

@@ -180,7 +180,7 @@ function init() {
   if ($(window).width() < 768) {
     hideColumnClass("show-rarity");
     hideColumnClass("bait");
-    hideColumnClass("bait-icon");
+    hideColumnClass("bait-image");
     hideColumnClass("location");
     hideColumnClass("time");
 
@@ -249,9 +249,11 @@ function TableComparer(index) {
  * @returns
  */
 function TableCellValue(row, index) {
+  console.log($(row).children("td").eq(index));
   let td = $(row).children("td").eq(index),
-    dataSort = td.attr("data-bait") || td.attr("data-rarity");
-  if (!td.text()) {
+    dataSort =
+      td.attr("data-bait") || td.attr("data-rarity") || td.attr("data-number");
+  if (!td.text() && td.text() != "") {
     return td.children("input")[0].checked == true ? "0" : "1";
   } else if (dataSort) {
     return dataSort;
