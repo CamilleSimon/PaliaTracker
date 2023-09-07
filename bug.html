@@ -8,32 +8,27 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link href="assets/css/theme.css" rel="stylesheet" />
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
       integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
     <link rel="icon" href="assets/fav.png" />
     <title>Bugs Tracker</title>
 
     <!-- Google tag (gtag.js) -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-ZQ2J16KNKN"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZQ2J16KNKN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -54,8 +49,7 @@
         data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a href="index.html" class="navbar-brand mb-0 h1 p-0">
@@ -66,8 +60,7 @@
       </a>
       <div
         class="collapse navbar-collapse justify-content-center"
-        id="navbarSupportedContent"
-      >
+        id="navbarSupportedContent">
         <ul class="nav flex-column mt-1">
           <li class="nav-item d-flex flex-row align-items-center">
             <a class="nav-link" href="fish.html"
@@ -189,8 +182,9 @@
           <table class="table table-dark align-middle" id="fish-table">
             <thead>
               <tr>
+                <th class="number sort-asc">#</th>
                 <th class="no-sort bug-image"></th>
-                <th class="sort-asc name">Name</th>
+                <th class="name">Name</th>
                 <th class="show-rarity">Rarity</th>
                 <th class="location">Location</th>
                 <th class="time">Time</th>
@@ -200,11 +194,230 @@
             </thead>
             <tbody class="table-group-divider">
               <tr>
+                <td data-number="0"></td>
+                <td class="bug-image">
+                  <img
+                    src="assets/img/Garden_Leafhopper.webp"
+                    class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Garden Leafhopper
+                  </a>
+                </td>
+                <td data-rarity="1-uncommon" class="show-rarity">
+                  <span class="rarity uncommon">Uncommon</span>
+                </td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="1"></td>
+                <td class="bug-image">
+                  <img src="assets/img/Garden_Mantis.webp" class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Garden Mantis
+                  </a>
+                </td>
+                <td data-rarity="1-uncommon" class="show-rarity">
+                  <span class="rarity uncommon">Uncommon</span>
+                </td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="2"></td>
+                <td class="bug-image">
+                  <img src="assets/img/Hairy_Millipede.webp" class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Hairy Millipede</a
+                  >
+                </td>
+                <td data-rarity="2-rare" class="show-rarity">
+                  <span class="rarity rare">Rare</span>
+                </td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="3"></td>
+                <td class="bug-image">
+                  <img
+                    src="assets/img/Rainbow-Tipped_Butterfly.webp"
+                    class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity epic'>Epic</span></li>
+                    <li>Location: Morning, Day</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Rainbow-Tipped Butterfly</a
+                  >
+                </td>
+                <td data-rarity="3-epic" class="show-rarity">
+                  <span class="rarity epic">Epic</span>
+                </td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="morning day">Morning, Day</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="4"></td>
+                <td class="bug-image">
+                  <img src="assets/img/Vampire_Crab.webp" class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: Evening, Night</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Vampire Crab</a
+                  >
+                </td>
+                <td data-rarity="2-rare" class="show-rarity">
+                  <span class="rarity rare">Rare</span>
+                </td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="evening night">Evening, Night</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="5"></td>
+                <td class="bug-image">
+                  <img
+                    src="assets/img/Firebreathing_Dragonfly.webp"
+                    class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Firebreathing Dragonfly</a
+                  >
+                </td>
+                <td data-rarity="2-rare" class="show-rarity">
+                  <span class="rarity rare">Rare</span>
+                </td>
+                <td class="location" data-location="kilima-valley">
+                  Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="6"></td>
+                <td class="bug-image">
+                  <img
+                    src="assets/img/Brushtail_Dragonfly.webp"
+                    class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay, Kilima Valley</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Brushtail Dragonfly</a
+                  >
+                </td>
+                <td data-rarity="0-common" class="show-rarity">
+                  <span class="rarity common">Common</span>
+                </td>
+                <td class="location" data-location="both">
+                  Bahari Bay, Kilima Valley
+                </td>
+                <td class="time" data-time="all">All Day</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="7"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Ancient_Amber_Beetle.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -231,26 +444,24 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="8"></td>
                 <td class="bug-image">
-                  <img
-                    src="assets/img/Azure_Stonehopper.png"
-                    class="bug-icon"
-                  />
+                  <img src="assets/img/Inky_Dragonfly.webp" class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
                     href="#/"
                     data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
                     <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
                     data-bs-placement="top"
                     data-bs-html="true"
                     data-bs-custom-class="custom-tooltip"
-                    >Azure Stonehopper</a
+                    >Inky Dragonfly</a
                   >
                 </td>
-                <td data-rarity="2-rare" class="show-rarity">
-                  <span class="rarity rare">Rare</span>
+                <td data-rarity="1-uncommon" class="show-rarity">
+                  <span class="rarity uncommon">Uncommon</span>
                 </td>
                 <td class="location" data-location="bahari-bay">Bahari Bay</td>
                 <td class="time" data-time="all">All Day</td>
@@ -262,6 +473,36 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="11"></td>
+                <td class="bug-image">
+                  <img src="assets/img/Bahari_Crab.webp" class="bug-icon" />
+                </td>
+                <td class="name">
+                  <a
+                    href="#/"
+                    data-bs-toggle="tooltip"
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
+                    data-bs-placement="top"
+                    data-bs-html="true"
+                    data-bs-custom-class="custom-tooltip"
+                    >Bahari Crab
+                  </a>
+                </td>
+                <td data-rarity="0-common" class="show-rarity">
+                  <span class="rarity common">Common</span>
+                </td>
+                <td class="location" data-location="bahari-bay">Bahari Bay</td>
+                <td class="time" data-time="all">All Day</td>
+                <td class="normal">
+                  <input type="checkbox" data-type="normal" />
+                </td>
+                <td class="one-star">
+                  <input type="checkbox" data-type="one-star" />
+                </td>
+              </tr>
+              <tr>
+                <td data-number="25"></td>
                 <td class="bug-image">
                   <img src="assets/img/Bahari_Bee.webp" class="bug-icon" />
                 </td>
@@ -299,23 +540,26 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="36"></td>
                 <td class="bug-image">
-                  <img src="assets/img/Bahari_Crab.webp" class="bug-icon" />
+                  <img
+                    src="assets/img/Azure_Stonehopper.png"
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
                     href="#/"
                     data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
+                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
                     <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
                     data-bs-placement="top"
                     data-bs-html="true"
                     data-bs-custom-class="custom-tooltip"
-                    >Bahari Crab
-                  </a>
+                    >Azure Stonehopper</a
+                  >
                 </td>
-                <td data-rarity="0-common" class="show-rarity">
-                  <span class="rarity common">Common</span>
+                <td data-rarity="2-rare" class="show-rarity">
+                  <span class="rarity rare">Rare</span>
                 </td>
                 <td class="location" data-location="bahari-bay">Bahari Bay</td>
                 <td class="time" data-time="all">All Day</td>
@@ -326,7 +570,9 @@
                   <input type="checkbox" data-type="one-star" />
                 </td>
               </tr>
+
               <tr>
+                <td data-number="-"></td>
                 <td class="bug-image">
                   <img src="assets/img/Bahari_Glowbug.webp" class="bug-icon" />
                 </td>
@@ -355,11 +601,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="35"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Brighteye_Butterfly.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -386,39 +632,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image">
-                  <img
-                    src="assets/img/Brushtail_Dragonfly.webp"
-                    class="bug-icon"
-                  />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity common'>Common</span></li>
-                    <li>Location: Bahari Bay, Kilima Valley</li><li>Time: All Day</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Brushtail Dragonfly</a
-                  >
-                </td>
-                <td data-rarity="0-common" class="show-rarity">
-                  <span class="rarity common">Common</span>
-                </td>
-                <td class="location" data-location="both">
-                  Bahari Bay, Kilima Valley
-                </td>
-                <td class="time" data-time="all">All Day</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
-              <tr>
+                <td data-number="22"></td>
                 <td class="bug-image">
                   <img src="assets/img/Cerulean_Cicada.webp" class="bug-icon" />
                 </td>
@@ -447,11 +661,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="21"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Common_Bark_Cicada.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -478,11 +692,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="10"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Common_Blue_Butterfly.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -511,11 +725,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="9"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Common_Field_Cricket.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -544,11 +758,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="17"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Duskwing_Butterfly.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -577,6 +791,7 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="20"></td>
                 <td class="bug-image">
                   <img src="assets/img/Fairy_Mantis.webp" class="bug-icon" />
                 </td>
@@ -605,39 +820,7 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image">
-                  <img
-                    src="assets/img/Firebreathing_Dragonfly.webp"
-                    class="bug-icon"
-                  />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
-                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Firebreathing Dragonfly</a
-                  >
-                </td>
-                <td data-rarity="2-rare" class="show-rarity">
-                  <span class="rarity rare">Rare</span>
-                </td>
-                <td class="location" data-location="kilima-valley">
-                  Kilima Valley
-                </td>
-                <td class="time" data-time="all">All Day</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
-              <tr>
+                <td data-number="14"></td>
                 <td class="bug-image">
                   <img src="assets/img/Garden_Ladybug.webp" class="bug-icon" />
                 </td>
@@ -686,74 +869,11 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image">
-                  <img
-                    src="assets/img/Garden_Leafhopper.webp"
-                    class="bug-icon"
-                  />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
-                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Garden Leafhopper
-                  </a>
-                </td>
-                <td data-rarity="1-uncommon" class="show-rarity">
-                  <span class="rarity uncommon">Uncommon</span>
-                </td>
-                <td class="location" data-location="kilima-valley">
-                  Kilima Valley
-                </td>
-                <td class="time" data-time="all">All Day</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
-              <tr>
-                <td class="bug-image">
-                  <img src="assets/img/Garden_Mantis.webp" class="bug-icon" />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
-                    <li>Location: Kilima Valley</li><li>Time: All Day</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Garden Mantis
-                  </a>
-                </td>
-                <td data-rarity="1-uncommon" class="show-rarity">
-                  <span class="rarity uncommon">Uncommon</span>
-                </td>
-                <td class="location" data-location="kilima-valley">
-                  Kilima Valley
-                </td>
-                <td class="time" data-time="all">All Day</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
-              <tr>
+                <td data-number="20"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Garden_Millipede.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -782,6 +902,7 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="33"></td>
                 <td class="bug-image">
                   <img src="assets/img/Garden_Snail.webp" class="bug-icon" />
                 </td>
@@ -810,11 +931,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="32"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Golden_Glory_Bee.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -852,11 +973,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="15"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Gossamer_Veil_Moth.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -885,67 +1006,11 @@
                 </td>
               </tr>
               <tr>
-                <td class="bug-image">
-                  <img src="assets/img/Hairy_Millipede.webp" class="bug-icon" />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
-                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Hairy Millipede</a
-                  >
-                </td>
-                <td data-rarity="2-rare" class="show-rarity">
-                  <span class="rarity rare">Rare</span>
-                </td>
-                <td class="location" data-location="bahari-bay">Bahari Bay</td>
-                <td class="time" data-time="all">All Day</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
-              <tr>
-                <td class="bug-image">
-                  <img src="assets/img/Inky_Dragonfly.webp" class="bug-icon" />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity uncommon'>Uncommon</span></li>
-                    <li>Location: Bahari Bay</li><li>Time: All Day</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Inky Dragonfly</a
-                  >
-                </td>
-                <td data-rarity="1-uncommon" class="show-rarity">
-                  <span class="rarity uncommon">Uncommon</span>
-                </td>
-                <td class="location" data-location="bahari-bay">Bahari Bay</td>
-                <td class="time" data-time="all">All Day</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
-              <tr>
+                <td data-number="18"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Jewelwing_Dragonfly.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -972,11 +1037,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="13"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Kilima_Night_Moth.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1005,11 +1070,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="12"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Leafstalker_Mantis.png"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1050,11 +1115,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="29"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Lunar_Fairy_Moth.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1081,11 +1146,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="34"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Paper_Lantern_Bug.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1112,11 +1177,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="19"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Princess_Ladybug.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1145,11 +1210,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="28"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Proudhorned_Stag_Beetle.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1188,43 +1253,13 @@
                   <input type="checkbox" data-type="one-star" />
                 </td>
               </tr>
+
               <tr>
-                <td class="bug-image">
-                  <img
-                    src="assets/img/Rainbow-Tipped_Butterfly.webp"
-                    class="bug-icon"
-                  />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity epic'>Epic</span></li>
-                    <li>Location: Morning, Day</li><li>Time: All Day</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Rainbow-Tipped Butterfly</a
-                  >
-                </td>
-                <td data-rarity="3-epic" class="show-rarity">
-                  <span class="rarity epic">Epic</span>
-                </td>
-                <td class="location" data-location="bahari-bay">Bahari Bay</td>
-                <td class="time" data-time="morning day">Morning, Day</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
-              <tr>
+                <td data-number="23"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Raspberry_Beetle.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1253,11 +1288,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="27"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Scintillating_Centipede.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1297,6 +1332,7 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="31"></td>
                 <td class="bug-image">
                   <img src="assets/img/Spineshell_Crab.webp" class="bug-icon" />
                 </td>
@@ -1325,6 +1361,7 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="-"></td>
                 <td class="bug-image">
                   <img src="assets/img/Spitfire_Cicada.webp" class="bug-icon" />
                 </td>
@@ -1353,6 +1390,7 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="16"></td>
                 <td class="bug-image">
                   <img src="assets/img/Spotted_Mantis.webp" class="bug-icon" />
                 </td>
@@ -1383,11 +1421,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="24"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Spotted_Stinkbug.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1416,11 +1454,11 @@
                 </td>
               </tr>
               <tr>
+                <td data-number="30"></td>
                 <td class="bug-image">
                   <img
                     src="assets/img/Stripeshell_Snails.webp"
-                    class="bug-icon"
-                  />
+                    class="bug-icon" />
                 </td>
                 <td class="name">
                   <a
@@ -1446,42 +1484,17 @@
                   <input type="checkbox" data-type="one-star" />
                 </td>
               </tr>
-              <tr>
-                <td class="bug-image">
-                  <img src="assets/img/Vampire_Crab.webp" class="bug-icon" />
-                </td>
-                <td class="name">
-                  <a
-                    href="#/"
-                    data-bs-toggle="tooltip"
-                    title-tooltip="<ul class='list-unstyled m-1'><li>Rarity: <span class='rarity rare'>Rare</span></li>
-                    <li>Location: Bahari Bay</li><li>Time: Evening, Night</li></ul>"
-                    data-bs-placement="top"
-                    data-bs-html="true"
-                    data-bs-custom-class="custom-tooltip"
-                    >Vampire Crab</a
-                  >
-                </td>
-                <td data-rarity="2-rare" class="show-rarity">
-                  <span class="rarity rare">Rare</span>
-                </td>
-                <td class="location" data-location="bahari-bay">Bahari Bay</td>
-                <td class="time" data-time="evening night">Evening, Night</td>
-                <td class="normal">
-                  <input type="checkbox" data-type="normal" />
-                </td>
-                <td class="one-star">
-                  <input type="checkbox" data-type="one-star" />
-                </td>
-              </tr>
             </tbody>
           </table>
         </article>
         <!--Footer-->
         <footer
-          class="flex-row d-flex justify-content-center align-items-baseline"
-        >
-          <p class="fs-6 mb-0">Created by Shaykan Tel'maris |</p>
+          class="flex-row d-flex justify-content-center align-items-baseline">
+          <p class="fs-6 mb-0">Source information from the</p>
+          <a class="icon" href="https://palia.wiki.gg/" target="_blank"
+            >Official Palia Wiki</a
+          >
+          <p>| Created by Shaykan Tel'maris |</p>
           <a class="icon" href="https://discord.gg/SyTvddYQ6W" target="_blank"
             ><i class="bi bi-discord"></i
           ></a>
