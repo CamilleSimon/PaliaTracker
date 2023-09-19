@@ -249,11 +249,10 @@ function TableComparer(index) {
  * @returns
  */
 function TableCellValue(row, index) {
-  console.log($(row).children("td").eq(index));
   let td = $(row).children("td").eq(index),
     dataSort =
       td.attr("data-bait") || td.attr("data-rarity") || td.attr("data-number");
-  if (!td.text() && td.text() != "") {
+  if (!td.text().trim()) {
     return td.children("input")[0].checked == true ? "0" : "1";
   } else if (dataSort) {
     return dataSort;
