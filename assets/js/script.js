@@ -252,10 +252,11 @@ function TableCellValue(row, index) {
   let td = $(row).children("td").eq(index),
     dataSort =
       td.attr("data-bait") || td.attr("data-rarity") || td.attr("data-number");
-  if (!td.text().trim()) {
-    return td.children("input")[0].checked == true ? "0" : "1";
-  } else if (dataSort) {
+  console.log(!td.text().trim());
+  if (dataSort) {
     return dataSort;
+  } else if (!td.text().trim()) {
+    return td.children("input")[0].checked == true ? "0" : "1";
   } else {
     return td.text();
   }
