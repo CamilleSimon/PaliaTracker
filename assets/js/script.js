@@ -92,7 +92,7 @@ function listVisibilityUpdate() {
           .find("[data-bs-toggle='tooltip']")
           .text()
           .toLowerCase()
-          .indexOf(valueName) == 0;
+          .indexOf(valueName) >= 0;
     if (valueBait)
       show = show && $(this).find("[data-bait=" + valueBait + "]").length > 0;
     if (valueLocation)
