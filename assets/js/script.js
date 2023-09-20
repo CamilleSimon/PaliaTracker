@@ -76,18 +76,22 @@ $(document).ready(function () {
       saveFish(fishName, isStarFish);
     } else {
       deleteFish(fishName, isStarFish, otherBox);
+      ungrayLine($(this).parent().parent());
     }
     
+    const tr = $(this).parent().parent(),
+        normalCheckbox = tr.find("[data-type=normal]")[0].checked,
+        oneStarCheckbox = tr.find("[data-type=one-star]")[0].checked;
+
     /** Check if row needs to be hidden */
     const valueFilter = $("select#filter option:selected").attr("value");
     if (valueFilter == dataType) {
       $(this).parent().parent().toggle();
     } else if (valueFilter == "any") {
-      const tr = $(this).parent().parent(),
-        normalCheckbox = tr.find("[data-type=normal]")[0].checked,
-        oneStarCheckbox = tr.find("[data-type=one-star]")[0].checked;
       tr.toggle(!(normalCheckbox && oneStarCheckbox));
     }
+
+    grayLine(tr);
   });
 });
 
@@ -212,6 +216,7 @@ function init() {
         $(this).children().find("[data-type=one-star]")[0].checked = false;
       }
     }
+    grayLine($(this));
   });
   /**
    * Hide columns
@@ -242,6 +247,21 @@ function init() {
     tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+}
+
+/**
+ * Gray line if both checkboxes are checked
+ */
+function grayLine(tr) {
+  normalCheckbox = tr.find("[data-type=normal]")[0].checked,
+  oneStarCheckbox = tr.find("[data-type=one-star]")[0].checked;
+  if(normalCheckbox && oneStarCheckbox) {
+    tr.css('opacity', 0.4);
+  }
+}
+
+function ungrayLine(tr) {
+  tr.css('opacity', 1);
 }
 
 /**
@@ -292,7 +312,6 @@ function TableCellValue(row, index) {
   let td = $(row).children("td").eq(index),
     dataSort =
       td.attr("data-bait") || td.attr("data-rarity") || td.attr("data-number");
-  console.log(!td.text().trim());
   if (dataSort) {
     return dataSort;
   } else if (!td.text().trim()) {
