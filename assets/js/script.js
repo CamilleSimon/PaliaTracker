@@ -186,7 +186,6 @@ function init() {
   /**
    * Sanitize LocalStorage
    */
-  console.log(localStorage);
   for (var i = 0; i < localStorage.length; i++) {
     if(localStorage.key(i) != localStorage.key(i).trim()) {
       let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
@@ -194,12 +193,12 @@ function init() {
       localStorage.removeItem(localStorage.key(i));
     }
   }
-  console.log(localStorage);
+
   /**
    * Restore checkboxes with the stored status
    */
   $("table > tbody > tr").each(function () {
-    let name = $(this).find("[data-bs-toggle='tooltip']")[0].innerHTML,
+    let name = $(this).find("[data-bs-toggle='tooltip']")[0].innerHTML.trim(),
       stored = JSON.parse(localStorage.getItem(name));
     if (stored) {
       if (stored[0] == true) {
