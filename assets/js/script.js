@@ -55,11 +55,28 @@ $(document).ready(function () {
         .parent()
         .parent()
         .find("[data-bs-toggle='tooltip']")[0].innerHTML;
+    let otherBox;
+
+    if(isStarFish) {
+      otherBox = $(this)
+        .parent()
+        .parent()
+        .find("[data-type='normal']")
+        .is(":checked");
+    } else {
+      otherBox = $(this)
+        .parent()
+        .parent()
+        .find("[data-type='one-star']")
+        .is(":checked");
+    }
+
     if ($(this).is(":checked")) {
       saveFish(fishName, isStarFish);
     } else {
-      deleteFish(fishName, isStarFish);
+      deleteFish(fishName, isStarFish, otherBox);
     }
+    
     /** Check if row needs to be hidden */
     const valueFilter = $("select#filter option:selected").attr("value");
     if (valueFilter == dataType) {
@@ -142,24 +159,41 @@ function saveFish(name, isStarFish) {
  * @param {String} name
  * @param {Boolean} isStarFish
  */
-function deleteFish(name, isStarFish) {
+function deleteFish(name, isStarFish, otherBox) {
   let stored = JSON.parse(localStorage.getItem(name));
-  if (stored) {
+  if(!stored) {
+    stored = [];
+    if (isStarFish) {
+      stored.push(otherBox, false);
+    } else {
+      stored.push(false, otherBox);
+    }
+  } else {
     if (isStarFish) {
       stored[1] = false;
     } else {
       stored[0] = false;
     }
-    localStorage.setItem(name, JSON.stringify(stored));
-  } else {
-    saveFish(name, isStarFish);
   }
+  localStorage.setItem(name, JSON.stringify(stored));
 }
 
 /**
  * Page initialization
  */
 function init() {
+  /**
+   * Sanitize LocalStorage
+   */
+  console.log(localStorage);
+  for (var i = 0; i < localStorage.length; i++) {
+    if(localStorage.key(i) != localStorage.key(i).trim()) {
+      let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
+      localStorage.setItem(localStorage.key(i).trim(), JSON.stringify(data));
+      localStorage.removeItem(localStorage.key(i));
+    }
+  }
+  console.log(localStorage);
   /**
    * Restore checkboxes with the stored status
    */
