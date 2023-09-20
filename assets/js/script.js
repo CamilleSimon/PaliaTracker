@@ -167,9 +167,13 @@ function init() {
     if (stored) {
       if (stored[0] == true) {
         $(this).children().find("[data-type=normal]")[0].checked = true;
+      } else {
+        $(this).children().find("[data-type=normal]")[0].checked = false;
       }
       if (stored[1] == true) {
         $(this).children().find("[data-type=one-star]")[0].checked = true;
+      } else {
+        $(this).children().find("[data-type=one-star]")[0].checked = false;
       }
     }
   });
