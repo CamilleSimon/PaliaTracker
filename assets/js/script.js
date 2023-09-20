@@ -54,7 +54,8 @@ $(document).ready(function () {
       fishName = $(this)
         .parent()
         .parent()
-        .find("[data-bs-toggle='tooltip']")[0].innerHTML;
+        .find("[data-bs-toggle='tooltip']")[0].innerHTML
+        .trim();
     let otherBox;
 
     if(isStarFish) {
