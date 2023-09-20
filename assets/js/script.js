@@ -150,8 +150,8 @@ function deleteFish(name, isStarFish) {
     } else {
       stored[0] = false;
     }
+    localStorage.setItem(name, JSON.stringify(stored));
   }
-  localStorage.setItem(name, JSON.stringify(stored));
 }
 
 /**
