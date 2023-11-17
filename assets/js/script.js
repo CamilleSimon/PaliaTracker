@@ -56,11 +56,26 @@ $(document).ready(function () {
         .parent()
         .find("[data-bs-toggle='tooltip']")[0].innerHTML
         .trim();
+    let otherBox;
+
+    if(isStarFish) {
+      otherBox = $(this)
+        .parent()
+        .parent()
+        .find("[data-type='normal']")
+        .is(":checked");
+    } else {
+      otherBox = $(this)
+        .parent()
+        .parent()
+        .find("[data-type='one-star']")
+        .is(":checked");
+    }
 
     if ($(this).is(":checked")) {
       saveFish(fishName, isStarFish);
     } else {
-      deleteFish(fishName);
+      deleteFish(fishName, isStarFish, otherBox);
       ungrayLine($(this).parent().parent());
     }
     
@@ -77,8 +92,6 @@ $(document).ready(function () {
     }
 
     grayLine(tr);
-
-    init();
   });
 });
 
@@ -135,11 +148,13 @@ function saveFish(name, isStarFish) {
   let stored = JSON.parse(localStorage.getItem(name));
   if (!stored) {
     stored = [];
-  }
-  if (isStarFish) {
-    stored[0] = stored[1] = true;
+    stored.push(!isStarFish, isStarFish);
   } else {
-    stored[0] = true;
+    if (isStarFish) {
+      stored[1] = true;
+    } else {
+      stored[0] = true;
+    }
   }
   localStorage.setItem(name, JSON.stringify(stored));
 }
@@ -147,13 +162,24 @@ function saveFish(name, isStarFish) {
 /**
  * Save checkbox status in LocalStorage when checkbox is unchecked
  * @param {String} name
+ * @param {Boolean} isStarFish
  */
-function deleteFish(name) {
+function deleteFish(name, isStarFish, otherBox) {
   let stored = JSON.parse(localStorage.getItem(name));
   if(!stored) {
     stored = [];
+    if (isStarFish) {
+      stored.push(otherBox, false);
+    } else {
+      stored.push(false, otherBox);
+    }
+  } else {
+    if (isStarFish) {
+      stored[1] = false;
+    } else {
+      stored[0] = false;
+    }
   }
-  stored[0] = stored[1] = false;
   localStorage.setItem(name, JSON.stringify(stored));
 }
 
