@@ -235,6 +235,22 @@ function init() {
     }
   }
 
+  if(localStorage.key("Orqnge Bluegill")){
+    let data = JSON.parse(localStorage.getItem(localStorage.key("Orqnge Bluegill")));
+    localStorage.setItem("Orange Bluegill", JSON.stringify(data));
+    localStorage.removeItem("Orqnge Bluegill");
+  }
+  if(localStorage.key("Albinos Eel")){
+    let data = JSON.parse(localStorage.getItem(localStorage.key("Albinos Eel")));
+    localStorage.setItem("Albino Eel",  JSON.stringify(data));
+    localStorage.removeItem("Albinos Eel");
+  }
+  if(localStorage.key("Anciant Fish")){
+    let data = JSON.parse(localStorage.getItem(localStorage.key("Anciant Fish")));
+    localStorage.setItem("Ancient Fish", JSON.stringify(data));
+    localStorage.removeItem("Anciant Fish");
+  }
+
   /**
    * Restore checkboxes with the stored status
    */
