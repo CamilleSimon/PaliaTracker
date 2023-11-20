@@ -178,36 +178,41 @@
       <div class="aside d-none d-sm-block"></div>
       <div class="d-flex flex-column justify-content-between container">
         <article>
-          <div id="filters" class="d-flex flex-column flex-md-row">
-            <input id="search" type="text" placeholder="Name" />
-            <select id="rarity" class="d-none d-sm-block">
-              <option value="">All Rarity</option>
-              <option value="0-common">Common</option>
-              <option value="1-uncommon">Uncommon</option>
-              <option value="2-rare">Rare</option>
-              <option value="3-epic">Epic</option>
-            </select>
-            <select id="location">
-              <option value="">All Locations</option>
-              <option value="bahari-coast">Bahari Coast</option>
-              <option value="bahari-rivers">Bahari Rivers</option>
-              <option value="caves">Caves</option>
-              <option value="kilima-lake">Kilima Lake</option>
-              <option value="kilima-rivers">Kilima Rivers</option>
-              <option value="ponds">Ponds</option>
-            </select>
-            <select id="bait">
-              <option value="">All Baits</option>
-              <option value="0-none">None</option>
-              <option value="1-worm">Worm</option>
-              <option value="2-glow-worm">Glow Worm</option>
-            </select>
-            <select id="filter">
-              <option value="">Show All</option>
-              <option value="normal">Missing Normal</option>
-              <option value="one-star">Missing Star</option>
-              <option value="any">Missing Any</option>
-            </select>
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div id="filters" class="d-flex flex-column flex-md-row">
+              <input id="search" type="text" placeholder="Name" />
+              <select id="rarity" class="d-none d-sm-block">
+                <option value="">All Rarity</option>
+                <option value="0-common">Common</option>
+                <option value="1-uncommon">Uncommon</option>
+                <option value="2-rare">Rare</option>
+                <option value="3-epic">Epic</option>
+              </select>
+              <select id="location">
+                <option value="">All Locations</option>
+                <option value="bahari-coast">Bahari Coast</option>
+                <option value="bahari-rivers">Bahari Rivers</option>
+                <option value="caves">Caves</option>
+                <option value="kilima-lake">Kilima Lake</option>
+                <option value="kilima-rivers">Kilima Rivers</option>
+                <option value="ponds">Ponds</option>
+              </select>
+              <select id="bait">
+                <option value="">All Baits</option>
+                <option value="0-none">None</option>
+                <option value="1-worm">Worm</option>
+                <option value="2-glow-worm">Glow Worm</option>
+              </select>
+              <select id="filter">
+                <option value="">Show All</option>
+                <option value="normal">Missing Normal</option>
+                <option value="one-star">Missing Star</option>
+                <option value="any">Missing Any</option>
+              </select>
+            </div>
+            <div id="export" class="align-middle">
+              <div class="nav-link export-link">Export collection to PaliaTracker.com <img class="logo" src="assets/logo-paliatracker.webp"></div>
+            </div>
           </div>
           <table class="table table-dark align-middle" id="fish-table">
             <thead>
@@ -3760,6 +3765,50 @@
             </tbody>
           </table>
         </article>
+        <!-- Export Modal -->
+        <div class="modal fade" id="fishModalExport" tabindex="-1" role="dialog" aria-labelledby="fishModalExport" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content color-2dp">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><img class="logo" src="assets/logo.svg">><img class="logo" src="assets/logo-paliatracker.webp"> Export Fish Collection</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>You are about to export:</p>
+                <p><span class="fish-export-normal badge theme-color"></span><span class="ps-1"> Normal Fish</span></p>
+                <p><span class="fish-export-starred  badge theme-color"></span><span class="ps-1"> Star Quality Fish</span></p>
+              <p>Your data saved here won't be affected by the export.</p>
+              <p>Click Export to continue.</p>
+              </div>
+              <div class="modal-footer">
+                <a type="button" id="export-btn" class="btn theme-color import" href="" target="_blank">Export</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Import Modal -->
+        <div class="modal fade" id="fishModalImport" tabindex="-1" role="dialog" aria-labelledby="fishModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content color-2dp">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><img class="logo" src="assets/logo-paliatracker.webp">> <img class="logo" src="assets/logo.svg">Import Fish Collection</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>You are about to import:</p>
+                  <p><span class="fish-import-normal badge theme-color"></span><span class="ps-1"> Normal Fish</span></p>
+                  <p><span class="fish-import-starred  badge theme-color"></span><span class="ps-1"> Star Quality Fish</span></p>
+                  <p>Your saved data will be replaced by the imported ones.</p>
+                  <p>Click Import to finalize the import process.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" id="import-btn" class="btn theme-color import" onClick="importProcess()">Import</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <!--Footer-->
         <footer
         class="flex-row d-flex justify-content-center align-items-baseline">

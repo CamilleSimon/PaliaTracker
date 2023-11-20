@@ -1,4 +1,36 @@
+let fish_array = {};
+
 $(document).ready(function () {
+
+  /**
+   * Check if it's an import link
+   */
+  const urlParams = new URLSearchParams(window.location.search);
+  if(urlParams.get('ref') == "paliatracker.com" && urlParams.get('action') == "fish-import"){
+    importModal(urlParams);
+  }
+
+  /**
+   * Listen to export button
+   */
+  $('#export').on("click", function () {
+    let normal = starred = 0;
+    for (var i = 0; i < localStorage.length; i++) {
+      let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
+      if(data[0] == true){
+        normal++;
+      }
+      if(data[1] == true){
+        starred++;
+      }
+    };
+
+    $('.fish-export-normal').html(normal);
+    $('.fish-export-starred').html(starred);
+    $('#export-btn').attr('href', generateExportLink());
+    $('#fishModalExport').modal('show');
+  })
+
   init();
 
   /**
@@ -319,4 +351,65 @@ function TableCellValue(row, index) {
   } else {
     return td.text();
   }
+}
+
+/**
+ * Export to Palia Tracker
+ */
+function generateExportLink(){
+  let paramsObj = {
+    ref: "camillesimon.github.io",
+    action: "fish-import",
+  };
+  for (var i = 0; i < localStorage.length; i++) {
+    let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    if(data.find((element) => element == true)){
+      let name = localStorage.key(i);
+      paramsObj[name] = data;
+    }
+  }
+  let query = new URLSearchParams(paramsObj).toString()
+  return 'https://www.paliatracker.com/fish-tracker?' + query;
+}
+
+/**
+ * Display modal
+ */
+
+function importModal(urlParams){
+  let entries = urlParams.entries();
+  let normal = starred = 0;
+  for(const entry of entries) {
+    if(entry[0] != 'ref' && entry[0] != 'action'){
+      values = entry[1].split(',');
+
+      if(values[0] == "true") {
+        values[0] = true;
+        normal++;
+      } else {
+        values[0] = false;
+      }
+
+      if(values[1] == "true") {
+        values[1] = true;
+        starred++;
+      } else {
+        values[1] = false;
+      }
+
+      fish_array[entry[0]] = [values[0], values[1]]
+    }
+  }
+
+  $('.fish-import-normal').html(normal);
+  $('.fish-import-starred').html(starred);
+  $('#fishModalImport').modal('show');
+}
+
+function importProcess(){
+  if(fish_array){
+    localStorage.clear();
+    Object.keys(fish_array).forEach(e => localStorage.setItem(e, JSON.stringify(fish_array[e])));
+  }
+  window.location.replace("fish.html");
 }
