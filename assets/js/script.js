@@ -432,7 +432,6 @@ function importModal(urlParams){
 
 function importProcess(){
   if(fish_array){
-    localStorage.clear();
     Object.keys(fish_array).forEach(e => localStorage.setItem(e, JSON.stringify(fish_array[e])));
   }
   window.location.replace("fish.html");
