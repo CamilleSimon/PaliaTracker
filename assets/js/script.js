@@ -236,6 +236,24 @@ function init() {
   }
 
   /**
+   * Solves typos problem
+   */
+  if(localStorage.key("Orqnge Bluegill")){
+    localStorage.setItem("Orange Bluegill", JSON.parse(localStorage.getItem(localStorage.key("Orqnge Bluegill"))));
+    localStorage.removeItem("Orqnge Bluegill");
+  }
+
+  if(localStorage.key("Albinos Eel")){
+    localStorage.setItem("Albino Eel", JSON.parse(localStorage.getItem(localStorage.key("Albinos Eel"))));
+    localStorage.removeItem("Albinos Eel");
+  }
+
+  if(localStorage.key("Anciant Fish")){
+    localStorage.setItem("Ancient Fish", JSON.parse(localStorage.getItem(localStorage.key("Anciant Fish"))));
+    localStorage.removeItem("Anciant Fish");
+  }
+
+  /**
    * Restore checkboxes with the stored status
    */
   $("table > tbody > tr").each(function () {
