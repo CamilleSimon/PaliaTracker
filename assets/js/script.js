@@ -1,5 +1,5 @@
 let fish_array = {};
-let fish_names = ["Ancient Fish", "Energized Piranha", "Cactus Moray", " 	Striped Dace", "Eyeless Minnow", "Midnight Paddlefish", "Honey Loach", " 	Beluga Sturgeon", "Mottled Gobi", "Channel Catfish", "Thundering Eel", "Enchanted Pupfish", "Bluefin Tuna", "Umbran Carp", "Freshwater Eel", "Bahari Bream", "Bahari Pike", "Hypnotic Moray", "Scarlet Koi", " 	Smallmouth Bass", "Mirror Carp", "Gillyfin", " 	Blue Marlin", "Red-bellied Piranha", "Prism Trout", "Rainbow Trout", "Fathead Minnow", "Platinum Chad", "Stalking Catfish", "Ribbontail Ray", "Kenli's Carp", "Silver Salmon", "Albino Eel", "Giant Kilima Stingray", "Mudminnow", "Radiant Sunfish", "Giant Goldfish", "Cantankerous Koi", "Stonefish", "Cloudfish", "Silvery Minnow", "Crimson Fangtooth", "Crucian Carp", "Largemouth Bass", "Kilima Greyling", "Rosy Bitterling", "Kilima Redfin", "Long Nosed Unicorn Fish", "Cutthroat Trout", "Yellowfin Tuna", "Oily Anchovy", "Golden Salmon", "Kilima Catfish", "Paddlefish", "Yellow Perch", "Fairy Carp", "Mutated Angler", "Duskray", "Blobfish", "Void Ray", "Willow Lamprey", "Sardine", "Swordfin Eel", "Striped Sturgeon", "Dawnray", "Calico Koi", "Stickleback", "Stormray", "Flametongue Ray", "Shimmerfin", "Orange Bluegill", "Barracuda", "Painted Perch", "Bat Ray", "Indigo Lamprey", "Alligator Gar", "Blue Spotted Ray"];
+let fish_names = ["Ancient Fish", "Energized Piranha", "Cactus Moray", "Striped Dace", "Eyeless Minnow", "Midnight Paddlefish", "Honey Loach", "Beluga Sturgeon", "Mottled Gobi", "Channel Catfish", "Thundering Eel", "Enchanted Pupfish", "Bluefin Tuna", "Umbran Carp", "Freshwater Eel", "Bahari Bream", "Bahari Pike", "Hypnotic Moray", "Scarlet Koi", "Smallmouth Bass", "Mirror Carp", "Gillyfin", " 	Blue Marlin", "Red-bellied Piranha", "Prism Trout", "Rainbow Trout", "Fathead Minnow", "Platinum Chad", "Stalking Catfish", "Ribbontail Ray", "Kenli's Carp", "Silver Salmon", "Albino Eel", "Giant Kilima Stingray", "Mudminnow", "Radiant Sunfish", "Giant Goldfish", "Cantankerous Koi", "Stonefish", "Cloudfish", "Silvery Minnow", "Crimson Fangtooth", "Crucian Carp", "Largemouth Bass", "Kilima Greyling", "Rosy Bitterling", "Kilima Redfin", "Long Nosed Unicorn Fish", "Cutthroat Trout", "Yellowfin Tuna", "Oily Anchovy", "Golden Salmon", "Kilima Catfish", "Paddlefish", "Yellow Perch", "Fairy Carp", "Mutated Angler", "Duskray", "Blobfish", "Void Ray", "Willow Lamprey", "Sardine", "Swordfin Eel", "Striped Sturgeon", "Dawnray", "Calico Koi", "Stickleback", "Stormray", "Flametongue Ray", "Shimmerfin", "Orange Bluegill", "Barracuda", "Painted Perch", "Bat Ray", "Indigo Lamprey", "Alligator Gar", "Blue Spotted Ray"];
 
 $(document).ready(function () {
 
@@ -11,13 +11,15 @@ $(document).ready(function () {
     importModal(urlParams);
   }
 
+  init();
+
   /**
    * Listen to export button
    */
   $('#export').on("click", function () {
     let normal = starred = 0;
     for (var i = 0; i < localStorage.length; i++) {
-      if(fish_names.indexOf(localStorage.key(i) > 0)){
+      if(fish_names.indexOf(localStorage.key(i)) >= 0){
         let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
         if(data){
           if(data[0] == true){
@@ -35,8 +37,6 @@ $(document).ready(function () {
     $('#export-btn').attr('href', generateExportLink());
     $('#fishModalExport').modal('show');
   })
-
-  init();
 
   /**
    * Sort column when click on column header
@@ -383,7 +383,7 @@ function generateExportLink(){
     action: "fish-import",
   };
   for (var i = 0; i < localStorage.length; i++) {
-    if(fish_names.indexOf(localStorage.key(i) > 0)){
+    if(fish_names.indexOf(localStorage.key(i)) >= 0){
       let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
       if(data){
         let name = localStorage.key(i);
