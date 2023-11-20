@@ -367,10 +367,12 @@ function generateExportLink(){
     action: "fish-import",
   };
   for (var i = 0; i < localStorage.length; i++) {
-    let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    if(data.find((element) => element == true)){
-      let name = localStorage.key(i);
-      paramsObj[name] = data;
+    if(fish_names.indexOf(localStorage.key(i) > 0)){
+      let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
+      if(data){
+        let name = localStorage.key(i);
+        paramsObj[name] = data;
+      }
     }
   }
   let query = new URLSearchParams(paramsObj).toString()
