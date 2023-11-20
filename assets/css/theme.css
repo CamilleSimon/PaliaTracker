@@ -164,6 +164,14 @@ th {
   color: black;
 }
 
+.theme-color {
+  background-color: #45b2da;
+}
+
+.badge.theme-color {
+  color: white;
+}
+
 tr {
   height: 62px;
 }
@@ -208,4 +216,20 @@ tr {
   .name a {
     cursor: unset;
   }
+}
+
+.badge {
+  font-size: unset;
+}
+
+.btn.theme-color.import:hover {
+  background-color: hsl(196, 64%, 40%);
+}
+
+#export {
+  align-self: center;
+}
+
+.export-link {
+  cursor: pointer;
 }
