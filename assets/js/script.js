@@ -1,15 +1,22 @@
-let fish_array = {};
-let fish_names = ["Ancient Fish", "Energized Piranha", "Cactus Moray", "Striped Dace", "Eyeless Minnow", "Midnight Paddlefish", "Honey Loach", "Beluga Sturgeon", "Mottled Gobi", "Channel Catfish", "Thundering Eel", "Enchanted Pupfish", "Bluefin Tuna", "Umbran Carp", "Freshwater Eel", "Bahari Bream", "Bahari Pike", "Hypnotic Moray", "Scarlet Koi", "Smallmouth Bass", "Mirror Carp", "Gillyfin", "Blue Marlin", "Red-bellied Piranha", "Prism Trout", "Rainbow Trout", "Fathead Minnow", "Platinum Chad", "Stalking Catfish", "Ribbontail Ray", "Kenli's Carp", "Silver Salmon", "Albino Eel", "Giant Kilima Stingray", "Mudminnow", "Radiant Sunfish", "Giant Goldfish", "Cantankerous Koi", "Stonefish", "Cloudfish", "Silvery Minnow", "Crimson Fangtooth", "Crucian Carp", "Largemouth Bass", "Kilima Greyling", "Rosy Bitterling", "Kilima Redfin", "Long Nosed Unicorn Fish", "Cutthroat Trout", "Yellowfin Tuna", "Oily Anchovy", "Golden Salmon", "Kilima Catfish", "Paddlefish", "Yellow Perch", "Fairy Carp", "Mutated Angler", "Duskray", "Blobfish", "Void Ray", "Willow Lamprey", "Sardine", "Swordfin Eel", "Striped Sturgeon", "Dawnray", "Calico Koi", "Stickleback", "Stormray", "Flametongue Ray", "Shimmerfin", "Orange Bluegill", "Barracuda", "Painted Perch", "Bat Ray", "Indigo Lamprey", "Alligator Gar", "Blue Spotted Ray", "Spotted Bullhead", "Chub", "Black Sea Bass", "Bahari Bass"];
+let importArray = {};
+let fishNames = ["Ancient Fish", "Energized Piranha", "Cactus Moray", "Striped Dace", "Eyeless Minnow", "Midnight Paddlefish", "Honey Loach", "Beluga Sturgeon", "Mottled Gobi", "Channel Catfish", "Thundering Eel", "Enchanted Pupfish", "Bluefin Tuna", "Umbran Carp", "Freshwater Eel", "Bahari Bream", "Bahari Pike", "Hypnotic Moray", "Scarlet Koi", "Smallmouth Bass", "Mirror Carp", "Gillyfin", "Blue Marlin", "Red-bellied Piranha", "Prism Trout", "Rainbow Trout", "Fathead Minnow", "Platinum Chad", "Stalking Catfish", "Ribbontail Ray", "Kenli's Carp", "Silver Salmon", "Albino Eel", "Giant Kilima Stingray", "Mudminnow", "Radiant Sunfish", "Giant Goldfish", "Cantankerous Koi", "Stonefish", "Cloudfish", "Silvery Minnow", "Crimson Fangtooth", "Crucian Carp", "Largemouth Bass", "Kilima Greyling", "Rosy Bitterling", "Kilima Redfin", "Long Nosed Unicorn Fish", "Cutthroat Trout", "Yellowfin Tuna", "Oily Anchovy", "Golden Salmon", "Kilima Catfish", "Paddlefish", "Yellow Perch", "Fairy Carp", "Mutated Angler", "Duskray", "Blobfish", "Void Ray", "Willow Lamprey", "Sardine", "Swordfin Eel", "Striped Sturgeon", "Dawnray", "Calico Koi", "Stickleback", "Stormray", "Flametongue Ray", "Shimmerfin", "Orange Bluegill", "Barracuda", "Painted Perch", "Bat Ray", "Indigo Lamprey", "Alligator Gar", "Blue Spotted Ray", "Spotted Bullhead", "Chub", "Black Sea Bass", "Bahari Bass"];
+let bugsNames = ["Garden Leafhopper", "Garden Mantis", "Hairy Millipede", "Rainbow-Tipped Butterfly", "Vampire Crab", "Firebreathing Dragonfly", "Brushtail Dragonfly", "Ancient Amber Beetle", "Inky Dragonfly", "Bahari Crab", "Bahari Bee", "Azure Stonehopper", "Bahari Glowbug", "Brighteye Butterfly", "Cerulean Cicada", "Common Bark Cicada", "Common Blue Butterfly", "Common Field Cricket", "Duskwing Butterfly", "Fairy Mantis", "Garden Ladybug", "Garden Millipede", "Garden Snail", "Golden Glory Bee", "Gossamer Veil Moth", "Jewelwing Dragonfly", "Kilima Night Moth", "Leafstalker Mantis", "Lunar Fairy Moth", "Paper Lantern Bug", "Princess Ladybug", "Proudhorned Stag Beetle", "Raspberry Beetle", "Scintillating Centipede", "Spineshell Crab", "Spitfire Cicada", "Spotted Mantis", "Spotted Stinkbug", "Stripeshell Snail"]
 
+/**
+ * Actions to do once the page loaded:
+ * - Check if URL is an import link
+ * - Listen export button
+ * - Listen sort on table header
+ * - Listen search field & filters
+ * - Listen checkboxes
+ */
 $(document).ready(function () {
 
+  console.log(JSON.parse(localStorage.getItem(localStorage.key('Ancient Fish'))))
   /**
    * Check if it's an import link
    */
-  const urlParams = new URLSearchParams(window.location.search);
-  if(urlParams.get('ref') == "paliatracker.com" && urlParams.get('action') == "fish-import"){
-    importModal(urlParams);
-  }
+  displayImportModal(new URLSearchParams(window.location.search));
 
   init();
 
@@ -18,9 +25,20 @@ $(document).ready(function () {
    */
   $('#export').on("click", function () {
     let normal = starred = 0;
+    let list = [];
+    let type = null;
+
+    if(window.document.title == "Bugs Tracker") {
+      list = bugsNames;
+      type = "bug";
+    }
+    if(window.document.title == "Fishes Tracker") {
+      list = fishNames;
+      type = "fish";
+    }
+
     for (var i = 0; i < localStorage.length; i++) {
-      console.log(localStorage.key(i), fish_names.indexOf(localStorage.key(i)));
-      if(fish_names.indexOf(localStorage.key(i)) >= 0){
+      if(list.indexOf(localStorage.key(i)) >= 0){
         let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
         if(data){
           if(data[0] == true){
@@ -33,10 +51,12 @@ $(document).ready(function () {
       }
     };
 
-    $('.fish-export-normal').html(normal);
-    $('.fish-export-starred').html(starred);
-    $('#export-btn').attr('href', generateExportLink());
-    $('#fishModalExport').modal('show');
+    if(type) {
+      $(`.${type}-export-normal`).html(normal);
+      $(`.${type}-export-starred`).html(starred);
+      $(`#${type}-export-btn`).attr('href', generateExportLink(`${type}-import`));
+      $(`#${type}-export-modal`).modal('show');
+    }
   })
 
   /**
@@ -88,7 +108,7 @@ $(document).ready(function () {
   $("input:checkbox").change(function () {
     /** Save checkbox status */
     const dataType = $(this).attr("data-type"),
-      isStarFish = !(dataType == "one-star") ? false : true,
+      isStar = !(dataType == "one-star") ? false : true,
       fishName = $(this)
         .parent()
         .parent()
@@ -96,7 +116,7 @@ $(document).ready(function () {
         .trim();
     let otherBox;
 
-    if(isStarFish) {
+    if(isStar) {
       otherBox = $(this)
         .parent()
         .parent()
@@ -111,9 +131,9 @@ $(document).ready(function () {
     }
 
     if ($(this).is(":checked")) {
-      saveFish(fishName, isStarFish);
+      save(fishName, isStar);
     } else {
-      deleteFish(fishName, isStarFish, otherBox);
+      deleteItem(fishName, isStar, otherBox);
       ungrayLine($(this).parent().parent());
     }
     
@@ -180,15 +200,15 @@ function listVisibilityUpdate() {
 /**
  * Save checkbox status in LocalStorage when checkbox is checked
  * @param {String} name
- * @param {Boolean} isStarFish
+ * @param {Boolean} isStar
  */
-function saveFish(name, isStarFish) {
+function save(name, isStar) {
   let stored = JSON.parse(localStorage.getItem(name));
   if (!stored) {
     stored = [];
-    stored.push(!isStarFish, isStarFish);
+    stored.push(!isStar, isStar);
   } else {
-    if (isStarFish) {
+    if (isStar) {
       stored[1] = true;
     } else {
       stored[0] = true;
@@ -200,19 +220,19 @@ function saveFish(name, isStarFish) {
 /**
  * Save checkbox status in LocalStorage when checkbox is unchecked
  * @param {String} name
- * @param {Boolean} isStarFish
+ * @param {Boolean} isStar
  */
-function deleteFish(name, isStarFish, otherBox) {
+function deleteItem(name, isStar, otherBox) {
   let stored = JSON.parse(localStorage.getItem(name));
   if(!stored) {
     stored = [];
-    if (isStarFish) {
+    if (isStar) {
       stored.push(otherBox, false);
     } else {
       stored.push(false, otherBox);
     }
   } else {
-    if (isStarFish) {
+    if (isStar) {
       stored[1] = false;
     } else {
       stored[0] = false;
@@ -378,61 +398,90 @@ function TableCellValue(row, index) {
 /**
  * Export to Palia Tracker
  */
-function generateExportLink(){
+function generateExportLink(importAction){
   let paramsObj = {
     ref: "camillesimon.github.io",
-    action: "fish-import",
+    action: importAction,
   };
+  let list = [];
+  if(importAction == "fish-import") {
+    list = fishNames;
+  }
+  if(importAction == "bug-import") {
+    list = bugsNames;
+  }
+
   for (var i = 0; i < localStorage.length; i++) {
-    if(fish_names.indexOf(localStorage.key(i)) >= 0){
+    if(list.indexOf(localStorage.key(i)) >= 0){
       let data = JSON.parse(localStorage.getItem(localStorage.key(i)));
-      if(data){
+      if(data && (data[0] != false || data[1] != false)){
         let name = localStorage.key(i);
         paramsObj[name] = data;
       }
     }
   }
+
   let query = new URLSearchParams(paramsObj).toString()
-  return 'https://www.paliatracker.com/fish-tracker?' + query;
+  if(importAction == "fish-import"){
+    return 'https://www.paliatracker.com/fish-tracker?' + query;
+  }
+  if(importAction == "bug-import"){
+    return 'https://www.paliatracker.com/bug-tracker?' + query;
+  }
 }
 
 /**
- * Display modal
+ * Display modal if url contains parameters
+ * @param {*} urlParams 
  */
+function displayImportModal(urlParams){
+  if(urlParams && urlParams.get('ref') == "paliatracker.com" && urlParams.get('action')){
+    let type = urlParams.get('action').split('-')[0];
 
-function importModal(urlParams){
-  let entries = urlParams.entries();
-  let normal = starred = 0;
-  for(const entry of entries) {
-    if(entry[0] != 'ref' && entry[0] != 'action'){
-      values = entry[1].split(',');
+    if(type == "fish" || type =="bug"){
+      let entries = urlParams.entries();
+      delete entries.ref;
+      delete entries.action;
+      let normal = starred = 0;
 
-      if(values[0] == "true") {
-        values[0] = true;
-        normal++;
-      } else {
-        values[0] = false;
+      for(const entry of entries) {
+        values = entry[1].split(',');
+  
+        if(values[0] == "true") {
+          values[0] = true;
+          normal++;
+        } else {
+          values[0] = false;
+        }
+  
+        if(values[1] == "true") {
+          values[1] = true;
+          starred++;
+        } else {
+          values[1] = false;
+        }
+  
+        importArray[entry[0]] = [values[0], values[1]]
       }
 
-      if(values[1] == "true") {
-        values[1] = true;
-        starred++;
-      } else {
-        values[1] = false;
-      }
-
-      fish_array[entry[0]] = [values[0], values[1]]
+      $(`.${type}-import-normal`).html(normal);
+      $(`.${type}-import-starred`).html(starred);
+      $(`#${type}ModalImport`).modal('show');
     }
   }
-
-  $('.fish-import-normal').html(normal);
-  $('.fish-import-starred').html(starred);
-  $('#fishModalImport').modal('show');
 }
 
-function importProcess(){
-  if(fish_array){
-    Object.keys(fish_array).forEach(e => localStorage.setItem(e, JSON.stringify(fish_array[e])));
+/**
+ * Import the item of type
+ * @param {*} type 
+ */
+function importProcess(type){
+  if(type == "fish" || type =="bug"){
+    if(importArray){
+      Object.keys(importArray).forEach(e => localStorage.setItem(e, JSON.stringify(importArray[e])));
+    }
+    window.location.replace(`${type}.html`);
+  } else {
+    window.location.replace(`index.html`);
   }
-  window.location.replace("fish.html");
 }

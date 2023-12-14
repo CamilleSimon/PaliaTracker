@@ -176,28 +176,40 @@
       </aside>
       <div class="aside d-none d-sm-block"></div>
       <div class="d-flex flex-column justify-content-between container">
+        <article class="m-2 p-2">
+          <h3 class="border-bottom py-4 d-flex align-items-center pt-2">This little website arrives to its conclusion</h3>
+          <p>Thank you all for your support of this Palia Tracker! This website won't be updated anymore, I advise you to export your collection using the link below. ❤️</p>
+          <div id="export" class="align-middle">
+            <div class="nav-link export-link">Export collection to PaliaTracker.com <img class="logo" src="assets/logo-paliatracker.webp"></div>
+          </div>
+          <!--
         <article>
-          <div id="filters" class="d-flex flex-column flex-md-row">
-            <input id="search" type="text" placeholder="Name" />
-            <select id="rarity" class="show-rarity">
-              <option value="">All Rarity</option>
-              <option value="0-common">Common</option>
-              <option value="1-uncommon">Uncommon</option>
-              <option value="2-rare">Rare</option>
-              <option value="3-epic">Epic</option>
-            </select>
-            <select id="location">
-              <option value="">All Locations</option>
-              <option value="bahari-bay">Bahari Bay</option>
-              <option value="kilima-valley">Kilima Valley</option>
-              <option value="both">Both</option>
-            </select>
-            <select id="filter">
-              <option value="">Show All</option>
-              <option value="normal">Missing Normal</option>
-              <option value="one-star">Missing Star</option>
-              <option value="any">Missing Any</option>
-            </select>
+          <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div id="filters" class="d-flex flex-column flex-md-row">
+              <input id="search" type="text" placeholder="Name" />
+              <select id="rarity" class="show-rarity">
+                <option value="">All Rarity</option>
+                <option value="0-common">Common</option>
+                <option value="1-uncommon">Uncommon</option>
+                <option value="2-rare">Rare</option>
+                <option value="3-epic">Epic</option>
+              </select>
+              <select id="location">
+                <option value="">All Locations</option>
+                <option value="bahari-bay">Bahari Bay</option>
+                <option value="kilima-valley">Kilima Valley</option>
+                <option value="both">Both</option>
+              </select>
+              <select id="filter">
+                <option value="">Show All</option>
+                <option value="normal">Missing Normal</option>
+                <option value="one-star">Missing Star</option>
+                <option value="any">Missing Any</option>
+              </select>
+            </div>
+            <div id="export" class="align-middle" style="display: none;">
+              <div class="nav-link export-link">Export collection to PaliaTracker.com <img class="logo" src="assets/logo-paliatracker.webp"></div>
+            </div>
           </div>
           <table class="table table-dark align-middle" id="fish-table">
             <thead>
@@ -824,7 +836,7 @@
                     data-bs-placement="top"
                     data-bs-html="true"
                     data-bs-custom-class="custom-tooltip"
-                    >Fairy_Mantis</a
+                    >Fairy Mantis</a
                   >
                 </td>
                 <td data-rarity="3-epic" class="show-rarity">
@@ -1505,8 +1517,52 @@
                 </td>
               </tr>
             </tbody>
-          </table>
+          </table>-->
         </article>
+        <!-- Export Modal -->
+        <div class="modal fade" id="bug-export-modal" tabindex="-1" role="dialog" aria-labelledby="bug-export-modal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content color-2dp">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><img class="logo" src="assets/logo.svg">><img class="logo" src="assets/logo-paliatracker.webp"> Export Bugs Collection</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>You are about to export:</p>
+                <p><span class="bug-export-normal badge theme-color"></span><span class="ps-1"> Normal Bugs</span></p>
+                <p><span class="bug-export-starred  badge theme-color"></span><span class="ps-1"> Star Quality Bugs</span></p>
+              <p>Your data saved here won't be affected by the export.</p>
+              <p>Click Export to continue.</p>
+              </div>
+              <div class="modal-footer">
+                <a type="button" id="bug-export-btn" class="btn theme-color import" href="" target="_blank">Export</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Import Modal -->
+        <div class="modal fade" id="bugModalImport" tabindex="-1" role="dialog" aria-labelledby="bugModal" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content color-2dp">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><img class="logo" src="assets/logo-paliatracker.webp">> <img class="logo" src="assets/logo.svg">Import Bug Collection</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>You are about to import:</p>
+                <p><span class="bug-import-normal badge theme-color"></span><span class="ps-1"> Normal Bugs</span></p>
+                <p><span class="bug-import-starred  badge theme-color"></span><span class="ps-1"> Star Quality Bugs</span></p>
+                <p>Your saved data will be replaced by the imported ones.</p>
+                <p>Click Import to finalize the import process.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="import-btn" class="btn theme-color import" onClick="importProcess('bug')">Import</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!--Footer-->
         <footer
         class="flex-row d-flex justify-content-center align-items-baseline">
