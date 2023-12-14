@@ -177,7 +177,13 @@
       </aside>
       <div class="aside d-none d-sm-block"></div>
       <div class="d-flex flex-column justify-content-between container">
-        <article>
+        <article class="m-2 p-2">
+          <h3 class="border-bottom py-4 d-flex align-items-center pt-2">This little website arrives to its conclusion</h3>
+          <p>Thank you all for your support of this Palia Tracker! This website won't be updated anymore, I advise you to export your collection using the link below. ❤️</p>
+          <div id="export" class="align-middle">
+            <div class="nav-link export-link">Export collection to PaliaTracker.com <img class="logo" src="assets/logo-paliatracker.webp"></div>
+          </div>
+          <!--
           <div class="d-flex flex-column flex-md-row justify-content-between">
             <div id="filters" class="d-flex flex-column flex-md-row">
               <input id="search" type="text" placeholder="Name" />
@@ -210,9 +216,7 @@
                 <option value="any">Missing Any</option>
               </select>
             </div>
-            <div id="export" class="align-middle">
-              <div class="nav-link export-link">Export collection to PaliaTracker.com <img class="logo" src="assets/logo-paliatracker.webp"></div>
-            </div>
+            
           </div>
           <table class="table table-dark align-middle" id="fish-table">
             <thead>
@@ -3764,13 +3768,14 @@
               </tr>
             </tbody>
           </table>
+          -->
         </article>
         <!-- Export Modal -->
-        <div class="modal fade" id="fishModalExport" tabindex="-1" role="dialog" aria-labelledby="fishModalExport" aria-hidden="true">
+        <div class="modal fade" id="fish-export-modal" tabindex="-1" role="dialog" aria-labelledby="fish-export-modal" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content color-2dp">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><img class="logo" src="assets/logo.svg">><img class="logo" src="assets/logo-paliatracker.webp"> Export Fish Collection</h5>
+                <h5 class="modal-title" id="fish-modal-title"><img class="logo" src="assets/logo.svg">><img class="logo" src="assets/logo-paliatracker.webp"> Export Fish Collection</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -3781,7 +3786,7 @@
               <p>Click Export to continue.</p>
               </div>
               <div class="modal-footer">
-                <a type="button" id="export-btn" class="btn theme-color import" href="" target="_blank">Export</a>
+                <a type="button" id="fish-export-btn" class="btn theme-color import" href="" target="_blank">Export</a>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
@@ -3803,7 +3808,7 @@
                   <p>Click Import to finalize the import process.</p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" id="import-btn" class="btn theme-color import" onClick="importProcess()">Import</button>
+                  <button type="button" id="import-btn" class="btn theme-color import" onClick="importProcess('fish')">Import</button>
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
               </div>
